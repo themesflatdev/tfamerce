@@ -1357,3 +1357,79 @@
         right: 0;
     }
 }
+
+.sib-form {
+    padding: 0;
+    font-family: $font-main;
+}
+.form-content_fieldset {
+    display: flex;
+    gap: 12px;
+    @include res(sm) {
+        flex-direction: column;
+    }
+}
+.form-get_email {
+    backdrop-filter: blur(4px);
+    border-width: 1px;
+    border-style: solid;
+    background: var(--white-10);
+    border: 1px solid var(--white-10);
+    border-image: initial;
+    padding: 12px;
+    border-radius: 999px;
+    width: 100%;
+    @include res(sm) {
+        border-radius: 10px;
+    }
+}
+.form-get_email .ip input {
+    backdrop-filter: blur(4px);
+    height: unset;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    background: var(--white-10);
+    border: 1px solid var(--white-10) !important;
+    border-image: initial;
+    border-radius: 999px;
+    padding: 15px 30px !important;
+    width: 100%;
+    @include res(xl) {
+        padding: 9px 20px !important;
+    }
+}
+.form-get_email .ip input::placeholder {
+    font-size: 16px;
+}
+#sib-container {
+    background-color: transparent;
+    padding: 0;
+}
+.sib-form-block {
+    padding: 0;
+    width: 100%;
+}
+.sib-form-block .tf-btn {
+    width: 100%;
+}
+.fieldset-input_email {
+    display: flex;
+    flex-grow: 1;
+}
+.sib-form .entry__specification {
+    margin: 0 !important;
+}
+.sib-form .entry__field {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+}
+.sib-form .entry__field:focus-within {
+    box-shadow: unset;
+}
+
+.section-form-subscribe .box-title {
+    margin-bottom: 32px;
+}
