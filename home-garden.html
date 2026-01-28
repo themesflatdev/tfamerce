@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/image-compare-viewer.min.css">
+    <link rel="stylesheet" href="assets/css/photoswipe.css">
+    <link rel="stylesheet" href="assets/css/drift-basic.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 
     <!-- Favicon and Touch Icons  -->
@@ -99,81 +102,189 @@
                     <div class="header-left d-none d-xl-block">
                         <nav class="box-navigation">
                             <ul class="box-nav-menu">
-                                <li class="menu-item">
+                                <li class="menu-item position-relative">
                                     <a href="#" class="item-link">
                                         <span class="text cus-text">
                                             Home
                                         </span>
                                         <i class="icon icon-CaretDown"></i>
                                     </a>
-                                    <div class="sub-menu mega-menu mega-menu_home full">
-                                        <div class="container">
-                                            <div class="row-demo">
-                                                <div class="demo-item">
-                                                    <a href="index.html" class="demo-img">
-                                                        <img src="assets/images/demo/home-1.jpg" alt="Demo">
-                                                    </a>
-                                                    <a href="index.html" class="demo-name">Home Fashion</a>
-                                                </div>
-                                                <div class="demo-item">
-                                                    <a href="home-mental-and-physical.html" class="demo-img">
-                                                        <img src="assets/images/demo/home-2.jpg" alt="Demo">
-                                                    </a>
-                                                    <a href="home-mental-and-physical.html" class="demo-name">Home
-                                                        Mental</a>
-                                                </div>
-                                                <div class="demo-item">
-                                                    <a href="home-electronics.html" class="demo-img">
-                                                        <img src="assets/images/demo/home-3.jpg" alt="Demo">
-                                                    </a>
-                                                    <a href="home-electronics.html" class="demo-name">Home
-                                                        Electronics</a>
-                                                </div>
-                                                <div class="demo-item">
-                                                    <a href="home-personalized-and-custom.html" class="demo-img">
-                                                        <img src="assets/images/demo/home-4.jpg" alt="Demo">
-                                                    </a>
-                                                    <a href="home-personalized-and-custom.html" class="demo-name">Home
-                                                        Personalized</a>
-                                                </div>
-                                                <div class="demo-item">
-                                                    <a href="home-pet-care.html" class="demo-img">
-                                                        <img src="assets/images/demo/home-5.jpg" alt="Demo">
-                                                    </a>
-                                                    <a href="home-pet-care.html" class="demo-name">Home Pet Care</a>
-                                                </div>
-                                                <div class="demo-item">
-                                                    <a href="home-baby-and-parenting.html" class="demo-img">
-                                                        <img src="assets/images/demo/home-6.jpg" alt="Demo">
-                                                    </a>
-                                                    <a href="home-baby-and-parenting.html" class="demo-name">Home
-                                                        Baby</a>
-                                                </div>
-                                                <div class="demo-item">
-                                                    <a href="home-auto.html" class="demo-img">
-                                                        <img src="assets/images/demo/home-7.jpg" alt="Demo">
-                                                    </a>
-                                                    <a href="home-auto.html" class="demo-name">Home Auto</a>
-                                                </div>
-                                                <div class="demo-item">
-                                                    <a href="home-decor.html" class="demo-img">
-                                                        <img src="assets/images/demo/home-8.jpg" alt="Demo">
-                                                    </a>
-                                                    <a href="home-decor.html" class="demo-name">Home Decor</a>
-                                                </div>
-                                                <div class="demo-item">
-                                                    <a href="home-cosmetic.html" class="demo-img">
-                                                        <img src="assets/images/demo/home-9.jpg" alt="Demo">
-                                                    </a>
-                                                    <a href="home-cosmetic.html" class="demo-name">Home Cosmetic</a>
-                                                </div>
-                                                <div class="demo-item">
-                                                    <a href="home-organic.html" class="demo-img">
-                                                        <img src="assets/images/demo/home-10.jpg" alt="Demo">
-                                                    </a>
-                                                    <a href="home-organic.html" class="demo-name">Home Organic</a>
-                                                </div>
-                                            </div>
+                                    <div class="sub-menu mega-menu_home_v2 home-type_2">
+                                        <ul class="sub-menu_list">
+                                            <li>
+                                                <a href="index.html" class="sub-menu_link has-text">
+                                                    <span class="cus-text">
+                                                        Main Demo
+                                                    </span>
+                                                    <span class="demo-label type-hot">Hot</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="home-mental.html" class="sub-menu_link has-text">
+                                                    <span class="cus-text">
+                                                        Home Mental
+                                                    </span>
+                                                    <span class="demo-label type-new">New</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="home-electronics.html" class="sub-menu_link has-text">
+                                                    <span class="cus-text">
+                                                        Home Electronics
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="home-pod.html" class="sub-menu_link has-text">
+                                                    <span class="cus-text">
+                                                        Home POD
+                                                    </span>
+                                                    <span class="demo-label type-new">New</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="home-pet-care.html" class="sub-menu_link has-text">
+                                                    <span class="cus-text">
+                                                        Home Pet Care
+                                                    </span>
+                                                    <span class="demo-label type-trend">Trend</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="home-baby.html" class="sub-menu_link has-text">
+                                                    <span class="cus-text">
+                                                        Home Baby
+                                                    </span>
+                                                    <span class="demo-label type-hot">Hot</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="home-auto.html" class="sub-menu_link has-text">
+                                                    <span class="cus-text">
+                                                        Home Auto
+                                                    </span>
+                                                    <span class="demo-label type-new">New</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="sub-menu_list">
+                                            <li>
+                                                <a href="home-decor.html" class="sub-menu_link has-text">
+                                                    <span class="cus-text">
+                                                        Home Decor
+                                                    </span>
+                                                    <span class="demo-label type-new">New</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="home-cosmetic.html" class="sub-menu_link has-text">
+                                                    <span class="cus-text">
+                                                        Home Cosmetic
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="home-organic.html" class="sub-menu_link has-text">
+                                                    <span class="cus-text">
+                                                        Home Organic
+                                                    </span>
+                                                    <span class="demo-label type-hot">Hot</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="sub-menu_link has-text soon">
+                                                    <span class="cus-text">
+                                                        Home Fashion
+                                                    </span>
+                                                    <span class="demo-label type-soon">Soon</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="sub-menu_link has-text soon">
+                                                    <span class="cus-text">
+                                                        Home Headphone
+                                                    </span>
+                                                    <span class="demo-label type-soon">Soon</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="sub-menu_link has-text soon">
+                                                    <span class="cus-text">
+                                                        Home Jewellry
+                                                    </span>
+                                                    <span class="demo-label type-soon">Soon</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="sub-menu_link has-text soon">
+                                                    <span class="cus-text">
+                                                        Home Gardent
+                                                    </span>
+                                                    <span class="demo-label type-soon">Soon</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="sub-menu_list">
+                                            <li>
+                                                <a href="#" class="sub-menu_link has-text soon">
+                                                    <span class="cus-text">
+                                                        Home Construct
+                                                    </span>
+                                                    <span class="demo-label type-soon">Soon</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="sub-menu_link has-text soon">
+                                                    <span class="cus-text">
+                                                        Home Furniture
+                                                    </span>
+                                                    <span class="demo-label type-soon">Soon</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="sub-menu_link has-text soon">
+                                                    <span class="cus-text">
+                                                        Home Fashion 2
+                                                    </span>
+                                                    <span class="demo-label type-soon">Soon</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="sub-menu_link has-text soon">
+                                                    <span class="cus-text">
+                                                        Home Bag
+                                                    </span>
+                                                    <span class="demo-label type-soon">Soon</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="sub-menu_link has-text soon">
+                                                    <span class="cus-text">
+                                                        Home Sport
+                                                    </span>
+                                                    <span class="demo-label type-soon">Soon</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="sub-menu_link has-text soon">
+                                                    <span class="cus-text">
+                                                        Home Office
+                                                    </span>
+                                                    <span class="demo-label type-soon">Soon</span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="sub-menu_link has-text soon">
+                                                    <span class="cus-text">
+                                                        Home Fashion 3
+                                                    </span>
+                                                    <span class="demo-label type-soon">Soon</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <div class="image-preview">
+                                            <img loading="lazy" width="300" height="264"
+                                                src="assets/images/section/amerce-html.jpg" alt="Image">
                                         </div>
                                     </div>
                                 </li>
@@ -307,13 +418,13 @@
                                                 </div>
                                                 <div class="col-2">
                                                     <div class="mega-menu-item menu-lv-2">
-                                                        <p class="menu-heading">SHOP HOVER</p>
+                                                        <p class="menu-heading">PRODUCT HOVER</p>
                                                         <ul class="sub-menu_list">
                                                             <li>
                                                                 <a href="shop-hover-01.html"
                                                                     class="sub-menu_link has-text">
                                                                     <span class="cus-text">
-                                                                        Shop Hover 01
+                                                                        Product Style 01
                                                                     </span>
                                                                 </a>
                                                             </li>
@@ -321,7 +432,7 @@
                                                                 <a href="shop-hover-02.html"
                                                                     class="sub-menu_link has-text">
                                                                     <span class="cus-text">
-                                                                        Shop Hover 02
+                                                                        Product Style 02
                                                                     </span>
                                                                 </a>
                                                             </li>
@@ -329,7 +440,7 @@
                                                                 <a href="shop-hover-03.html"
                                                                     class="sub-menu_link has-text">
                                                                     <span class="cus-text">
-                                                                        Shop Hover 03
+                                                                        Product Style 03
                                                                     </span>
                                                                 </a>
                                                             </li>
@@ -337,7 +448,23 @@
                                                                 <a href="shop-hover-04.html"
                                                                     class="sub-menu_link has-text">
                                                                     <span class="cus-text">
-                                                                        Shop Hover 04
+                                                                        Product Style 04
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop-hover-05.html"
+                                                                    class="sub-menu_link has-text">
+                                                                    <span class="cus-text">
+                                                                        Product Style 05
+                                                                    </span>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="shop-hover-06.html"
+                                                                    class="sub-menu_link has-text">
+                                                                    <span class="cus-text">
+                                                                        Product Style 06
                                                                     </span>
                                                                 </a>
                                                             </li>
@@ -836,13 +963,6 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="track-order.html" class="sub-menu_link has-text">
-                                                    <span class="cus-text">
-                                                        Order Tracking
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
                                                 <a href="404.html" class="sub-menu_link has-text">
                                                     <span class="cus-text">
                                                         404
@@ -850,23 +970,16 @@
                                                 </a>
                                             </li>
                                             <li>
-                                                <a href="account-page.html" class="sub-menu_link has-text">
-                                                    <span class="cus-text">
-                                                        My Account
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="view-cart.html" class="sub-menu_link has-text">
-                                                    <span class="cus-text">
-                                                        View Cart
-                                                    </span>
-                                                </a>
-                                            </li>
-                                            <li>
                                                 <a href="compare.html" class="sub-menu_link has-text">
                                                     <span class="cus-text">
                                                         Compare
+                                                    </span>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="account-page.html" class="sub-menu_link has-text">
+                                                    <span class="cus-text">
+                                                        My Account
                                                     </span>
                                                 </a>
                                             </li>
@@ -938,7 +1051,1794 @@
             </div>
         </header>
         <!-- /Header -->
-        <div class="" style="height: 1000px;"></div>
+        <!-- Slide Show -->
+        <section class="tf-slideshow slideshow-3 pt-30 p-xl-0">
+            <div dir="ltr" class="swiper tf-swiper sw-slide-show slideshow-2 slider_effect_fade" data-auto=""
+                data-loop="true" data-effect="fade" data-delay="3000">
+                <div class="swiper-wrapper">
+                    <!-- item 1 -->
+                    <div class="swiper-slide">
+                        <div class="slider-wrap_4">
+                            <div class="sld-content">
+                                <div class="sld-image-abs">
+                                    <img class="d-md-none scale-item" loading="lazy" width="900" height="600"
+                                        src="assets/images/slider/slider-31.jpg" alt="Image">
+                                    <img class="d-none d-md-block" loading="lazy" width="900" height="600"
+                                        src="assets/images/item/garden-item-1.png" alt="Image">
+                                </div>
+                                <div class="content-sld_wrap text-center mx-auto">
+                                    <h6 class="text-white mb-16 fade-item fade-item-1">
+                                        LIMITED TIME SAVINGS
+                                    </h6>
+                                    <div class="title_sld text-display text-white fade-item fade-item-2">
+                                        Find Quiet <br class="d-none d-xl-block">
+                                        With Plants
+                                    </div>
+                                    <p class="decs_sld text-body-1 text-white fade-item fade-item-3">Beautiful foliage,
+                                        crafted planters, and must-have tools that help <br class="d-none d-xxl-block">
+                                        you build a relaxing green sanctuary indoors.</p>
+                                    <div class="fade-item fade-item-4">
+                                        <a href="shop-default.html" class="tf-btn btn-white animate-btn animate-dark">
+                                            View All Products
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sld-image overflow-hidden">
+                                <img class="scale-item" loading="lazy" width="900" height="600"
+                                    src="assets/images/slider/slider-31.jpg" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 2 -->
+                    <div class="swiper-slide">
+                        <div class="slider-wrap_4">
+                            <div class="sld-content">
+                                <div class="sld-image-abs">
+                                    <img class="d-md-none scale-item" loading="lazy" width="900" height="600"
+                                        src="assets/images/slider/slider-32.jpg" alt="Image">
+                                    <img class="d-none d-md-block" loading="lazy" width="900" height="600"
+                                        src="assets/images/item/garden-item-1.png" alt="Image">
+                                </div>
+                                <div class="content-sld_wrap text-center mx-auto">
+                                    <h6 class="text-white mb-16 fade-item fade-item-1">
+                                        SPECIAL SEASON OFFER
+                                    </h6>
+                                    <div class="title_sld text-display text-white fade-item fade-item-2">
+                                        Refresh Your <br class="d-none d-xl-block">
+                                        Home Garden
+                                    </div>
+                                    <p class="decs_sld text-body-1 text-white fade-item fade-item-3">Lush plant
+                                        varieties and modern accessories designed to elevate <br
+                                            class="d-none d-xxl-block"> your indoor garden with ease and charm.</p>
+                                    <div class="fade-item fade-item-4">
+                                        <a href="shop-default.html" class="tf-btn btn-white animate-btn animate-dark">
+                                            Explore Collection
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sld-image overflow-hidden">
+                                <img class="scale-item" loading="lazy" width="900" height="600"
+                                    src="assets/images/slider/slider-32.jpg" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- item 3 -->
+                    <div class="swiper-slide">
+                        <div class="slider-wrap_4">
+                            <div class="sld-content">
+                                <div class="sld-image-abs">
+                                    <img class="d-md-none scale-item" loading="lazy" width="900" height="600"
+                                        src="assets/images/slider/slider-33.jpg" alt="Image">
+                                    <img class="d-none d-md-block" loading="lazy" width="900" height="600"
+                                        src="assets/images/item/garden-item-1.png" alt="Image">
+                                </div>
+                                <div class="content-sld_wrap text-center mx-auto">
+                                    <h6 class="text-white mb-16 fade-item fade-item-1">
+                                        GREEN LIVING DEALS
+                                    </h6>
+                                    <div class="title_sld text-display text-white fade-item fade-item-2">
+                                        Fresh Indoor <br class="d-none d-xl-block">
+                                        Plants Arrive
+                                    </div>
+                                    <p class="decs_sld text-body-1 text-white fade-item fade-item-3">Curated
+                                        houseplants, stylish pots, and soothing greenery—perfect <br
+                                            class="d-none d-xxl-block"> pieces to brighten any living space.</p>
+                                    <div class="fade-item fade-item-4">
+                                        <a href="shop-default.html" class="tf-btn btn-white animate-btn animate-dark">
+                                            Shop Indoor Plants
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sld-image overflow-hidden">
+                                <img class="scale-item" loading="lazy" width="900" height="600"
+                                    src="assets/images/slider/slider-33.jpg" alt="Image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrap-sw-line">
+                    <div class="sw-line-default pst-2 tf-sw-pagination justify-content-center"></div>
+                </div>
+
+            </div>
+
+        </section>
+        <!-- /Slide Show -->
+        <!-- Best Sale -->
+        <section class="flat-spacing">
+            <div class="container">
+                <div class="sect-heading d-block d-md-flex type-2 has-col-right wow fadeInUp">
+                    <div>
+                        <h3 class="s-title">
+                            Best Sellers Products
+                        </h3>
+                        <p class="text-body-1 cl-text-2 ">A selection of our most-loved indoor plants and essentials.
+                        </p>
+                    </div>
+                    <div class="col-right">
+                        <a href="shop-default.html" class="tf-btn-line-2 py-4 style-primary">
+                            <span class="fw-semibold">
+                                View All Products
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-lg-0 mb-30">
+                        <div class="banner-image-text type-abs style-18">
+                            <a href="shop-default.html" class="bn-image img-style">
+                                <img loading="lazy" width="450" height="608" src="assets/images/section/banner-48.jpg"
+                                    alt="Image">
+                            </a>
+                            <div class="bn-content wow fadeInUp">
+                                <a href="shop-default.html" class="title h2 fw-medium link-3">
+                                    Discover Your <br class="d-xxl-block d-none"> New Green
+                                </a>
+                                <p class="desc text-caption-01 cl-text-2 mb-28">
+                                    Handpicked selections perfect for <br class="d-xxl-block d-none"> modern homes
+                                </p>
+                                <a href="shop-default.html" class="tf-btn animate-btn">
+                                    Add to cart
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tf-grid-layout tf-col-2 gap-15 gap-lg-30">
+                            <div class="card-product wow fadeInUp">
+                                <div class="card-product_wrapper square">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="img-product" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-1.jpg" alt="Product">
+                                        <img class="img-hover" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-1.jpg" alt="Product">
+                                    </a>
+                                    <ul class="product-action_list">
+                                        <li class="wishlist">
+                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-heart"></span>
+                                                <span class="tooltip">Add to Wishlist</span>
+                                            </a>
+                                        </li>
+                                        <li class="compare">
+                                            <a href="#compare" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-ArrowsLeftRight"></span>
+                                                <span class="tooltip">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#quickView" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="product-action_bot">
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
+                                            Add to Cart
+                                            <i class="icon icon-view"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="product-badge_list">
+                                        <li class="product-badge_item text-caption-01 sale">-25%</li>
+                                    </ul>
+                                </div>
+                                <div class="card-product_info text-center justify-content-center">
+                                    <a href="product-detail.html"
+                                        class="name-product lh-24 fw-medium link link-underline mx-auto">
+                                        JVC Wireless Headphones
+                                    </a>
+                                    <div class="star-wrap d-flex align-items-center mx-auto">
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                    </div>
+                                    <div class="price-wrap mx-auto">
+                                        <span class="price-new text-primary fw-semibold">$29.99</span>
+                                        <span class="price-old cl-text-3  text-caption-01">$39.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product wow fadeInUp">
+                                <div class="card-product_wrapper square">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="img-product" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-2.jpg" alt="Product">
+                                        <img class="img-hover" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-2.jpg" alt="Product">
+                                    </a>
+                                    <ul class="product-action_list">
+                                        <li class="wishlist">
+                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-heart"></span>
+                                                <span class="tooltip">Add to Wishlist</span>
+                                            </a>
+                                        </li>
+                                        <li class="compare">
+                                            <a href="#compare" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-ArrowsLeftRight"></span>
+                                                <span class="tooltip">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#quickView" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="product-action_bot">
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
+                                            Add to Cart
+                                            <i class="icon icon-view"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="product-badge_list">
+                                        <li class="product-badge_item text-caption-01 sale">-25%</li>
+                                    </ul>
+                                </div>
+                                <div class="card-product_info text-center justify-content-center">
+                                    <a href="product-detail.html"
+                                        class="name-product lh-24 fw-medium link link-underline mx-auto">
+                                        JVC Wireless Headphones
+                                    </a>
+                                    <div class="star-wrap d-flex align-items-center mx-auto">
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                    </div>
+                                    <div class="price-wrap mx-auto">
+                                        <span class="price-new text-primary fw-semibold">$29.99</span>
+                                        <span class="price-old cl-text-3  text-caption-01">$39.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="tf-grid-layout tf-col-2 gap-lg-30 gap-15">
+                            <div class="card-product wow fadeInUp">
+                                <div class="card-product_wrapper square">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="img-product" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-3.jpg" alt="Product">
+                                        <img class="img-hover" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-3.jpg" alt="Product">
+                                    </a>
+                                    <ul class="product-action_list">
+                                        <li class="wishlist">
+                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-heart"></span>
+                                                <span class="tooltip">Add to Wishlist</span>
+                                            </a>
+                                        </li>
+                                        <li class="compare">
+                                            <a href="#compare" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-ArrowsLeftRight"></span>
+                                                <span class="tooltip">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#quickView" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="product-action_bot">
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
+                                            Add to Cart
+                                            <i class="icon icon-view"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="product-badge_list">
+                                        <li class="product-badge_item text-caption-01 new">NEW</li>
+                                    </ul>
+                                </div>
+                                <div class="card-product_info text-center justify-content-center">
+                                    <a href="product-detail.html"
+                                        class="name-product lh-24 fw-medium link link-underline mx-auto">
+                                        MC100 Wireless Charge Pad For
+                                    </a>
+                                    <div class="star-wrap d-flex align-items-center mx-auto">
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                    </div>
+                                    <div class="price-wrap mx-auto">
+                                        <span class="price-new text-primary fw-semibold">$29.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product wow fadeInUp">
+                                <div class="card-product_wrapper square">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="img-product" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-4.jpg" alt="Product">
+                                        <img class="img-hover" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-4.jpg" alt="Product">
+                                    </a>
+                                    <ul class="product-action_list">
+                                        <li class="wishlist">
+                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-heart"></span>
+                                                <span class="tooltip">Add to Wishlist</span>
+                                            </a>
+                                        </li>
+                                        <li class="compare">
+                                            <a href="#compare" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-ArrowsLeftRight"></span>
+                                                <span class="tooltip">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#quickView" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="product-action_bot">
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
+                                            Add to Cart
+                                            <i class="icon icon-view"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="product-badge_list">
+                                        <li class="product-badge_item text-caption-01 sale">-25%</li>
+                                    </ul>
+                                </div>
+                                <div class="card-product_info text-center justify-content-center">
+                                    <a href="product-detail.html"
+                                        class="name-product lh-24 fw-medium link link-underline mx-auto">
+                                        JVC Wireless Headphones
+                                    </a>
+                                    <div class="star-wrap d-flex align-items-center mx-auto">
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                    </div>
+                                    <div class="price-wrap mx-auto">
+                                        <span class="price-new text-primary fw-semibold">$29.99</span>
+                                        <span class="price-old cl-text-3  text-caption-01">$39.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product wow fadeInUp">
+                                <div class="card-product_wrapper square">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="img-product" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-5.jpg" alt="Product">
+                                        <img class="img-hover" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-5.jpg" alt="Product">
+                                    </a>
+                                    <ul class="product-action_list">
+                                        <li class="wishlist">
+                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-heart"></span>
+                                                <span class="tooltip">Add to Wishlist</span>
+                                            </a>
+                                        </li>
+                                        <li class="compare">
+                                            <a href="#compare" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-ArrowsLeftRight"></span>
+                                                <span class="tooltip">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#quickView" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="product-action_bot">
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
+                                            Add to Cart
+                                            <i class="icon icon-view"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="product-badge_list">
+                                        <li class="product-badge_item text-caption-01 sale">-25%</li>
+                                    </ul>
+                                </div>
+                                <div class="card-product_info text-center justify-content-center">
+                                    <a href="product-detail.html"
+                                        class="name-product lh-24 fw-medium link link-underline mx-auto">
+                                        JVC Wireless Headphones
+                                    </a>
+                                    <div class="star-wrap d-flex align-items-center mx-auto">
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                    </div>
+                                    <div class="price-wrap mx-auto">
+                                        <span class="price-new text-primary fw-semibold">$29.99</span>
+                                        <span class="price-old cl-text-3  text-caption-01">$39.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-product wow fadeInUp">
+                                <div class="card-product_wrapper square">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="img-product" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-6.jpg" alt="Product">
+                                        <img class="img-hover" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-6.jpg" alt="Product">
+                                    </a>
+                                    <ul class="product-action_list">
+                                        <li class="wishlist">
+                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-heart"></span>
+                                                <span class="tooltip">Add to Wishlist</span>
+                                            </a>
+                                        </li>
+                                        <li class="compare">
+                                            <a href="#compare" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-ArrowsLeftRight"></span>
+                                                <span class="tooltip">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#quickView" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="product-action_bot">
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
+                                            Add to Cart
+                                            <i class="icon icon-view"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="product-badge_list">
+                                        <li class="product-badge_item text-caption-01 sale">-25%</li>
+                                    </ul>
+                                </div>
+                                <div class="card-product_info text-center justify-content-center">
+                                    <a href="product-detail.html"
+                                        class="name-product lh-24 fw-medium link link-underline mx-auto">
+                                        JVC Wireless Headphones
+                                    </a>
+                                    <div class="star-wrap d-flex align-items-center mx-auto">
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                    </div>
+                                    <div class="price-wrap mx-auto">
+                                        <span class="price-new text-primary fw-semibold">$29.99</span>
+                                        <span class="price-old cl-text-3  text-caption-01">$39.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Best Sale -->
+        <!-- Banner -->
+        <section class="section-banner-cls-v02">
+            <div class="left">
+                <div class="banner-image-text style-top-left tl-2">
+                    <a href="shop-default.html" class="bn-image img-style rounded-0">
+                        <img loading="lazy" width="640" height="954" src="assets/images/section/banner-49.jpg"
+                            alt="Image">
+                    </a>
+                    <div class="bn-content">
+                        <a href="shop-default.html" class="title h2 fw-medium link-3 text-white mb-8">
+                            Indoor Plant Picks
+                        </a>
+                        <p class="desc lh-26 text-white mb-12">
+                            Lush, easy-care varieties for every corner
+                        </p>
+                        <a href="shop-default.html"
+                            class="btn-action tf-btn small-2 btn-white animate-btn animate-dark">
+                            <span class="text-caption-01">
+                                Shop Now
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="tf-grid-layout sm-col-2 gap-10 mb-10">
+                    <div class="banner-image-text type-abs style-20">
+                        <a href="shop-default.html" class="bn-image img-style">
+                            <img loading="lazy" width="450" height="608" src="assets/images/section/banner-50.jpg"
+                                alt="Image">
+                        </a>
+                        <div class="bn-content wow fadeInUp">
+                            <a href="shop-default.html" class="title h2 fw-medium link-3 text-white mb-8">
+                                Modern Plant Pots
+                            </a>
+                            <p class="desc lh-26 text-white mb-12">
+                                Up to 50% Off Bestsellers.
+                            </p>
+                            <a href="shop-default.html" class="btn-action tf-btn-line-2 style-white">
+                                <span class="fw-semibold">
+                                    Shop Now
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="banner-image-text type-abs style-20">
+                        <a href="shop-default.html" class="bn-image img-style">
+                            <img loading="lazy" width="450" height="608" src="assets/images/section/banner-51.jpg"
+                                alt="Image">
+                        </a>
+                        <div class="bn-content wow fadeInUp">
+                            <a href="shop-default.html" class="title h2 fw-medium link-3 text-white mb-8">
+                                Simple Plant Tools
+                            </a>
+                            <p class="desc lh-26 text-white mb-12">
+                                Practical gear for simple
+                            </p>
+                            <a href="shop-default.html" class="btn-action tf-btn-line-2 style-white">
+                                <span class="fw-semibold">
+                                    Shop Now
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="banner-image-text type-abs style-19">
+                    <a href="shop-default.html" class="bn-image img-style">
+                        <img loading="lazy" width="450" height="608" src="assets/images/section/banner-52.jpg"
+                            alt="Image">
+                    </a>
+                    <div class="bn-content wow fadeInUp">
+                        <a href="shop-default.html" class="title h2 fw-medium link-3 text-white mb-8">
+                            Home Green Decor
+                        </a>
+                        <p class="desc lh-26 text-white mb-12">
+                            Natural accents to refresh spaces.
+                        </p>
+                        <a href="shop-default.html" class="btn-action tf-btn-line-2 style-white">
+                            <span class="fw-semibold">
+                                Shop Now
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Banner -->
+        <!-- Trending Finds -->
+        <section class="flat-spacing ">
+            <div class="container">
+                <div class="sect-heading type-4 align-items-end mb-40">
+                    <div class="flex-sm-1  wow fadeInUp">
+                        <h3 class="s-title mb-8">Trending Green Finds</h3>
+                        <p class="s-subtitle cl-text-2">Popular choices that bring freshness and character to any room.
+                        </p>
+                    </div>
+                    <div class="group-btn-slider wow fadeInUp d-md-flex d-none" data-wow-delay="0.1s">
+                        <div class="tf-sw-nav-2 style-large rounded-8 nav-prev-swiper">
+                            <i class="icon icon-ArrowLeft"></i>
+                        </div>
+                        <div class="tf-sw-nav-2 style-large rounded-8 nav-next-swiper">
+                            <i class="icon icon-ArrowRight"></i>
+                        </div>
+                    </div>
+                </div>
+                <div dir="ltr" class="swiper tf-swiper " data-preview="4" data-tablet="3" data-mobile-sm="2"
+                    data-mobile="2" data-space-lg="30" data-space-md="20" data-space="10" data-pagination="2"
+                    data-pagination-sm="2" data-pagination-md="3" data-pagination-lg="4">
+                    <div class="swiper-wrapper">
+                        <!-- slide 1 -->
+                        <div class="swiper-slide wow fadeInUp">
+                            <div class="card-product wow fadeInUp">
+                                <div class="card-product_wrapper square">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="img-product" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-7.jpg" alt="Product">
+                                        <img class="img-hover" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-7.jpg" alt="Product">
+                                    </a>
+                                    <ul class="product-action_list">
+                                        <li class="wishlist">
+                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-heart"></span>
+                                                <span class="tooltip">Add to Wishlist</span>
+                                            </a>
+                                        </li>
+                                        <li class="compare">
+                                            <a href="#compare" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-ArrowsLeftRight"></span>
+                                                <span class="tooltip">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#quickView" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="product-action_bot">
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
+                                            Add to Cart
+                                            <i class="icon icon-view"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="product-badge_list">
+                                        <li class="product-badge_item text-caption-01 sale">-25%</li>
+                                    </ul>
+                                </div>
+                                <div class="card-product_info text-center justify-content-center">
+                                    <a href="product-detail.html"
+                                        class="name-product lh-24 fw-medium link link-underline mx-auto">
+                                        JVC Wireless Headphones
+                                    </a>
+                                    <div class="star-wrap d-flex align-items-center mx-auto">
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                    </div>
+                                    <div class="price-wrap mx-auto">
+                                        <span class="price-new text-primary fw-semibold">$29.99</span>
+                                        <span class="price-old cl-text-3  text-caption-01">$39.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide 2 -->
+                        <div class="swiper-slide wow fadeInUp" data-wow-delay="0.1s">
+                            <div class="card-product wow fadeInUp">
+                                <div class="card-product_wrapper square">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="img-product" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-8.jpg" alt="Product">
+                                        <img class="img-hover" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-8.jpg" alt="Product">
+                                    </a>
+                                    <ul class="product-action_list">
+                                        <li class="wishlist">
+                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-heart"></span>
+                                                <span class="tooltip">Add to Wishlist</span>
+                                            </a>
+                                        </li>
+                                        <li class="compare">
+                                            <a href="#compare" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-ArrowsLeftRight"></span>
+                                                <span class="tooltip">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#quickView" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="product-action_bot">
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
+                                            Add to Cart
+                                            <i class="icon icon-view"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="product-badge_list">
+                                        <li class="product-badge_item text-caption-01 sale">-25%</li>
+                                    </ul>
+                                </div>
+                                <div class="card-product_info text-center justify-content-center">
+                                    <a href="product-detail.html"
+                                        class="name-product lh-24 fw-medium link link-underline mx-auto">
+                                        JVC Wireless Headphones
+                                    </a>
+                                    <div class="star-wrap d-flex align-items-center mx-auto">
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                    </div>
+                                    <div class="price-wrap mx-auto">
+                                        <span class="price-new text-primary fw-semibold">$29.99</span>
+                                        <span class="price-old cl-text-3  text-caption-01">$39.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide 3 -->
+                        <div class="swiper-slide wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="card-product wow fadeInUp">
+                                <div class="card-product_wrapper square">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="img-product" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-9.jpg" alt="Product">
+                                        <img class="img-hover" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-9.jpg" alt="Product">
+                                    </a>
+                                    <ul class="product-action_list">
+                                        <li class="wishlist">
+                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-heart"></span>
+                                                <span class="tooltip">Add to Wishlist</span>
+                                            </a>
+                                        </li>
+                                        <li class="compare">
+                                            <a href="#compare" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-ArrowsLeftRight"></span>
+                                                <span class="tooltip">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#quickView" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="product-action_bot">
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
+                                            Add to Cart
+                                            <i class="icon icon-view"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="product-badge_list">
+                                        <li class="product-badge_item text-caption-01 sale">-25%</li>
+                                    </ul>
+                                </div>
+                                <div class="card-product_info text-center justify-content-center">
+                                    <a href="product-detail.html"
+                                        class="name-product lh-24 fw-medium link link-underline mx-auto">
+                                        JVC Wireless Headphones
+                                    </a>
+                                    <div class="star-wrap d-flex align-items-center mx-auto">
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                    </div>
+                                    <div class="price-wrap mx-auto">
+                                        <span class="price-new text-primary fw-semibold">$29.99</span>
+                                        <span class="price-old cl-text-3  text-caption-01">$39.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide 4 -->
+                        <div class="swiper-slide wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="card-product wow fadeInUp">
+                                <div class="card-product_wrapper square">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="img-product" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-10.jpg" alt="Product">
+                                        <img class="img-hover" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-10.jpg" alt="Product">
+                                    </a>
+                                    <ul class="product-action_list">
+                                        <li class="wishlist">
+                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-heart"></span>
+                                                <span class="tooltip">Add to Wishlist</span>
+                                            </a>
+                                        </li>
+                                        <li class="compare">
+                                            <a href="#compare" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-ArrowsLeftRight"></span>
+                                                <span class="tooltip">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#quickView" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="product-action_bot">
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
+                                            Add to Cart
+                                            <i class="icon icon-view"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="product-badge_list">
+                                        <li class="product-badge_item text-caption-01 sale">-25%</li>
+                                    </ul>
+                                </div>
+                                <div class="card-product_info text-center justify-content-center">
+                                    <a href="product-detail.html"
+                                        class="name-product lh-24 fw-medium link link-underline mx-auto">
+                                        JVC Wireless Headphones
+                                    </a>
+                                    <div class="star-wrap d-flex align-items-center mx-auto">
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                    </div>
+                                    <div class="price-wrap mx-auto">
+                                        <span class="price-new text-primary fw-semibold">$29.99</span>
+                                        <span class="price-old cl-text-3  text-caption-01">$39.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide 5 -->
+                        <div class="swiper-slide">
+                            <div class="card-product wow fadeInUp">
+                                <div class="card-product_wrapper square">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="img-product" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-1.jpg" alt="Product">
+                                        <img class="img-hover" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-1.jpg" alt="Product">
+                                    </a>
+                                    <ul class="product-action_list">
+                                        <li class="wishlist">
+                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-heart"></span>
+                                                <span class="tooltip">Add to Wishlist</span>
+                                            </a>
+                                        </li>
+                                        <li class="compare">
+                                            <a href="#compare" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-ArrowsLeftRight"></span>
+                                                <span class="tooltip">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#quickView" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="product-action_bot">
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
+                                            Add to Cart
+                                            <i class="icon icon-view"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="product-badge_list">
+                                        <li class="product-badge_item text-caption-01 sale">-25%</li>
+                                    </ul>
+                                </div>
+                                <div class="card-product_info text-center justify-content-center">
+                                    <a href="product-detail.html"
+                                        class="name-product lh-24 fw-medium link link-underline mx-auto">
+                                        JVC Wireless Headphones
+                                    </a>
+                                    <div class="star-wrap d-flex align-items-center mx-auto">
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                    </div>
+                                    <div class="price-wrap mx-auto">
+                                        <span class="price-new text-primary fw-semibold">$29.99</span>
+                                        <span class="price-old cl-text-3  text-caption-01">$39.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide 6 -->
+                        <div class="swiper-slide">
+                            <div class="card-product wow fadeInUp">
+                                <div class="card-product_wrapper square">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="img-product" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-2.jpg" alt="Product">
+                                        <img class="img-hover" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-2.jpg" alt="Product">
+                                    </a>
+                                    <ul class="product-action_list">
+                                        <li class="wishlist">
+                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-heart"></span>
+                                                <span class="tooltip">Add to Wishlist</span>
+                                            </a>
+                                        </li>
+                                        <li class="compare">
+                                            <a href="#compare" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-ArrowsLeftRight"></span>
+                                                <span class="tooltip">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#quickView" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="product-action_bot">
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
+                                            Add to Cart
+                                            <i class="icon icon-view"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="product-badge_list">
+                                        <li class="product-badge_item text-caption-01 sale">-25%</li>
+                                    </ul>
+                                </div>
+                                <div class="card-product_info text-center justify-content-center">
+                                    <a href="product-detail.html"
+                                        class="name-product lh-24 fw-medium link link-underline mx-auto">
+                                        JVC Wireless Headphones
+                                    </a>
+                                    <div class="star-wrap d-flex align-items-center mx-auto">
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                    </div>
+                                    <div class="price-wrap mx-auto">
+                                        <span class="price-new text-primary fw-semibold">$29.99</span>
+                                        <span class="price-old cl-text-3  text-caption-01">$39.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide 7 -->
+                        <div class="swiper-slide">
+                            <div class="card-product wow fadeInUp">
+                                <div class="card-product_wrapper square">
+                                    <a href="product-detail.html" class="product-img">
+                                        <img class="img-product" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-3.jpg" alt="Product">
+                                        <img class="img-hover" loading="lazy" width="330" height="330"
+                                            src="assets/images/product/garden/product-3.jpg" alt="Product">
+                                    </a>
+                                    <ul class="product-action_list">
+                                        <li class="wishlist">
+                                            <a href="#;" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-heart"></span>
+                                                <span class="tooltip">Add to Wishlist</span>
+                                            </a>
+                                        </li>
+                                        <li class="compare">
+                                            <a href="#compare" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-ArrowsLeftRight"></span>
+                                                <span class="tooltip">Compare</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#quickView" data-bs-toggle="offcanvas"
+                                                class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="product-action_bot">
+                                        <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                            class="tf-btn btn-white small animate-btn animate-dark w-100">
+                                            Add to Cart
+                                            <i class="icon icon-view"></i>
+                                        </a>
+                                    </div>
+                                    <ul class="product-badge_list">
+                                        <li class="product-badge_item text-caption-01 sale">-25%</li>
+                                    </ul>
+                                </div>
+                                <div class="card-product_info text-center justify-content-center">
+                                    <a href="product-detail.html"
+                                        class="name-product lh-24 fw-medium link link-underline mx-auto">
+                                        JVC Wireless Headphones
+                                    </a>
+                                    <div class="star-wrap d-flex align-items-center mx-auto">
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                        <i class="icon icon-Star"></i>
+                                    </div>
+                                    <div class="price-wrap mx-auto">
+                                        <span class="price-new text-primary fw-semibold">$29.99</span>
+                                        <span class="price-old cl-text-3  text-caption-01">$39.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sw-dot-default tf-sw-pagination d-md-none"></div>
+                </div>
+            </div>
+        </section>
+        <!-- /Trending Finds -->
+        <!-- Plan Care -->
+        <section>
+            <div class="container">
+                <div class="sect-heading type-2 text-center wow fadeInUp">
+                    <h3 class="s-title">
+                        Plant Care, Elevated for Home
+                    </h3>
+                    <p class="s-desc text-body-1 cl-text-2">
+                        Thoughtfully designed supplies that simplify nurturing your indoor greenery.
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 mb-40 mb-md-0">
+                        <div class="plan-care-item hover-img4 ips-1">
+                            <a href="product-detail.html" class="img-style4">
+                                <img width="400" height="400" loading="lazy" decoding="async"
+                                    src="/assets/images/section/plan-item-1.jpg" alt="Plan image">
+                            </a>
+                            <div class="content">
+                                <div>
+                                    <h4 class="title mb-12 ">
+                                        <a href="product-deals.html" class="link text-line-clamp-2">Daily Plant Nutrient
+                                            Care</a>
+                                    </h4>
+                                    <p class="text-body-1 cl-text-2 text-line-clamp-3">This liquid blend enriches soil,
+                                        balances pH,
+                                        boosts plant health, and blends easily with watering.</p>
+                                </div>
+                                <a href="product-deals.html" class="tf-btn animate-btn small-2">
+                                    <span class="text-caption-01">Buy now - $12.00</span>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <img width="153" height="172" src="assets/images/item/garden-item-2.png" alt="item">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="plan-care-item hover-img4 ips-2">
+                            <a href="product-detail.html" class="img-style4">
+                                <img width="400" height="400" loading="lazy" decoding="async"
+                                    src="/assets/images/section/plan-item-2.jpg" alt="Plan image">
+                            </a>
+                            <div class="content">
+                                <div>
+                                    <h4 class="title mb-12 ">
+                                        <a href="product-deals.html" class="link text-line-clamp-2">Simple Pot Watering
+                                            Aid</a>
+                                    </h4>
+                                    <p class="text-body-1 cl-text-2 text-line-clamp-3">A simple attachable tool that
+                                        delivers hydration,
+                                        making watering smoother and more consistent overall.</p>
+                                </div>
+                                <a href="product-deals.html" class="tf-btn animate-btn small-2">
+                                    <span class="text-caption-01">Buy now - $18.00</span>
+                                </a>
+                            </div>
+                            <div class="item">
+                                <img width="153" height="172" src="assets/images/item/garden-item-2.png" alt="item">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Plan Care -->
+        <!-- Banner -->
+        <section class="flat-spacing">
+            <div class="banner-v02 parallaxie " style='background-image: url("assets/images/section/banner-53.jpg")'>
+                <div class="bn_image">
+                    <img class="opacity-0" loading="lazy" width="1920" height="620"
+                        src="assets/images/section/banner-53.jpg" alt="Image">
+                </div>
+                <div class="bn_content">
+                    <div class="wrap">
+                        <h3 class="title">
+                            Nurture A Home Filled With <br class="d-none d-md-block">
+                            Calm Green Beauty
+                        </h3>
+                        <p class="desc text-body-1">
+                            Experience thoughtfully crafted pieces that refresh your space <br
+                                class="d-none d-md-block">
+                            and elevate your everyday living.
+                        </p>
+                        <a href="#" class="tf-btn animate-btn">
+                            View All Products
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Banner -->
+        <!-- Testimonials -->
+        <section class="flat-spacing pt-0">
+            <div class="container">
+                <div class="sect-heading type-2 text-center wow fadeInUp">
+                    <h3 class="s-title">
+                        What Our Customers Say
+                    </h3>
+                    <p class="s-desc text-body-1 cl-text-2">
+                        Real stories from people who love our products.
+                    </p>
+                </div>
+                <div dir="ltr" class="swiper tf-swiper" data-preview="3" data-tablet="2" data-mobile-sm="2"
+                    data-mobile="1" data-space-lg="30" data-space-md="20" data-space="10" data-pagination="1"
+                    data-pagination-sm="2" data-pagination-md="2" data-pagination-lg="3">
+                    <div class="swiper-wrapper">
+                        <!-- slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-v03 hover-img4">
+                                <div href="#" class="img-style4">
+                                    <img width="450" height="312" loading="lazy" decoding="async"
+                                        src="assets/images/testimonial/tes-22.jpg" alt="testimonial">
+                                    <ul class="tes-action_list">
+                                        <li>
+                                            <a href="#" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content">
+                                    <div class="star-wrap d-flex align-items-center mb-12">
+                                        <i class="icon icon-Star fs-20"></i>
+                                        <i class="icon icon-Star fs-20"></i>
+                                        <i class="icon icon-Star fs-20"></i>
+                                        <i class="icon icon-Star fs-20"></i>
+                                        <i class="icon icon-Star fs-20"></i>
+                                    </div>
+                                    <div class="tes_author mb-8">
+                                        <h6 class="author-name">Emma Collins</h6>
+                                        <div class="author-verified">
+                                            <i class="icon icon-Vector"></i>
+                                            <span class="cl-text-2">
+                                                Verified Buyer
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <h6 class="text-capitalize">“They arrived healthy, and even more beautiful than the
+                                        photos.
+                                        I’ve already recommended
+                                        them to all my friends!”</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-v03 hover-img4">
+                                <div href="#" class="img-style4">
+                                    <img width="450" height="312" loading="lazy" decoding="async"
+                                        src="assets/images/testimonial/tes-23.jpg" alt="testimonial">
+                                    <ul class="tes-action_list">
+                                        <li>
+                                            <a href="#" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content">
+                                    <div class="star-wrap d-flex align-items-center mb-12">
+                                        <i class="icon icon-Star fs-20"></i>
+                                        <i class="icon icon-Star fs-20"></i>
+                                        <i class="icon icon-Star fs-20"></i>
+                                        <i class="icon icon-Star fs-20"></i>
+                                        <i class="icon icon-Star fs-20"></i>
+                                    </div>
+                                    <div class="tes_author mb-8">
+                                        <h6 class="author-name">Marcus R.</h6>
+                                        <div class="author-verified">
+                                            <i class="icon icon-Vector"></i>
+                                            <span class="cl-text-2">
+                                                Verified Buyer
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <h6 class="text-capitalize">“I’m seriously impressed with this shop. The packaging
+                                        was
+                                        secure, the plant looked perfect”</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="testimonial-v03 hover-img4">
+                                <div href="#" class="img-style4">
+                                    <img width="450" height="312" loading="lazy" decoding="async"
+                                        src="assets/images/testimonial/tes-24.jpg" alt="testimonial">
+                                    <ul class="tes-action_list">
+                                        <li>
+                                            <a href="#" class="hover-tooltip tooltip-left box-icon">
+                                                <span class="icon icon-Eye"></span>
+                                                <span class="tooltip">Quick view</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="content">
+                                    <div class="star-wrap d-flex align-items-center mb-12">
+                                        <i class="icon icon-Star fs-20"></i>
+                                        <i class="icon icon-Star fs-20"></i>
+                                        <i class="icon icon-Star fs-20"></i>
+                                        <i class="icon icon-Star fs-20"></i>
+                                        <i class="icon icon-Star fs-20"></i>
+                                    </div>
+                                    <div class="tes_author mb-8">
+                                        <h6 class="author-name">Daniel K.</h6>
+                                        <div class="author-verified">
+                                            <i class="icon icon-Vector"></i>
+                                            <span class="cl-text-2">
+                                                Verified Buyer
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <h6 class="text-capitalize">“it brightens up my desk and makes the whole room feel
+                                        fresher.
+                                        I’ll definitely be buying more soon!”</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sw-line-default style-2 tf-sw-pagination"></div>
+                </div>
+        </section>
+        <!-- /Testimonials -->
+        <!-- Banner Product Single -->
+        <div class="banner-product-single style-6 section-image-zoom flat-spacing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="tf-product-media-wrap sticky-top">
+                            <div class="product-thumbs-slider style-row row_left">
+                                <div class="flat-wrap-media-product">
+                                    <div dir="ltr" class="swiper tf-product-media-main" id="gallery-swiper-started"
+                                        data-spacing="0">
+                                        <div class="swiper-wrapper">
+                                            <!-- item 1 -->
+                                            <div class="swiper-slide">
+                                                <a href="assets/images/product/single/detail-10.jpg" target="_blank"
+                                                    class="item" data-pswp-width="565px" data-pswp-height="753px">
+                                                    <img loading="lazy" width="700" height="700" class="tf-image-zoom"
+                                                        data-zoom="assets/images/product/single/detail-10.jpg"
+                                                        src="assets/images/product/single/detail-10.jpg"
+                                                        alt="img-product">
+                                                </a>
+                                            </div>
+                                            <!-- item 2 -->
+                                            <div class="swiper-slide">
+                                                <a href="assets/images/product/single/detail-10_1.jpg" target="_blank"
+                                                    class="item" data-pswp-width="565px" data-pswp-height="753px">
+                                                    <img loading="lazy" width="700" height="700" class="tf-image-zoom"
+                                                        data-zoom="assets/images/product/single/detail-10_1.jpg"
+                                                        src="assets/images/product/single/detail-10_1.jpg"
+                                                        alt="img-product">
+                                                </a>
+                                            </div>
+                                            <!-- item 3 -->
+                                            <div class="swiper-slide">
+                                                <a href="assets/images/product/single/detail-10_2.jpg" target="_blank"
+                                                    class="item" data-pswp-width="565px" data-pswp-height="753px">
+                                                    <img loading="lazy" width="700" height="700" class="tf-image-zoom"
+                                                        data-zoom="assets/images/product/single/detail-10_2.jpg"
+                                                        src="assets/images/product/single/detail-10_2.jpg"
+                                                        alt="img-product">
+                                                </a>
+                                            </div>
+                                            <!-- item 4 -->
+                                            <div class="swiper-slide">
+                                                <a href="assets/images/product/single/detail-10_3.jpg" target="_blank"
+                                                    class="item" data-pswp-width="565px" data-pswp-height="753px">
+                                                    <img loading="lazy" width="700" height="700" class="tf-image-zoom"
+                                                        data-zoom="assets/images/product/single/detail-10_3.jpg"
+                                                        src="assets/images/product/single/detail-10_3.jpg"
+                                                        alt="img-product">
+                                                </a>
+                                            </div>
+                                            <!-- item 5 -->
+                                            <div class="swiper-slide">
+                                                <a href="assets/images/product/single/detail-10_4.jpg" target="_blank"
+                                                    class="item" data-pswp-width="565px" data-pswp-height="753px">
+                                                    <img loading="lazy" width="700" height="700" class="tf-image-zoom"
+                                                        data-zoom="assets/images/product/single/detail-10_4.jpg"
+                                                        src="assets/images/product/single/detail-10_4.jpg"
+                                                        alt="img-product">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div dir="ltr" class="swiper tf-product-media-thumbs other-image-zoom"
+                                    data-direction="vertical" data-preview="5">
+                                    <div class="swiper-wrapper stagger-wrap">
+                                        <!-- item 1 -->
+                                        <div class="swiper-slide stagger-item">
+                                            <div class="item">
+                                                <img loading="lazy" width="80" height="80"
+                                                    src="assets/images/product/single/detail-10.jpg" alt="Image">
+                                            </div>
+                                        </div>
+                                        <!-- item 2 -->
+                                        <div class="swiper-slide stagger-item">
+                                            <div class="item">
+                                                <img loading="lazy" width="80" height="80"
+                                                    src="assets/images/product/single/detail-10_1.jpg" alt="Image">
+                                            </div>
+                                        </div>
+                                        <!-- item 3 -->
+                                        <div class="swiper-slide stagger-item">
+                                            <div class="item">
+                                                <img loading="lazy" width="80" height="80"
+                                                    src="assets/images/product/single/detail-10_2.jpg" alt="Image">
+                                            </div>
+                                        </div>
+                                        <!-- item 4 -->
+                                        <div class="swiper-slide stagger-item">
+                                            <div class="item">
+                                                <img loading="lazy" width="80" height="80"
+                                                    src="assets/images/product/single/detail-10_3.jpg" alt="Image">
+                                            </div>
+                                        </div>
+                                        <!-- item 5 -->
+                                        <div class="swiper-slide stagger-item">
+                                            <div class="item">
+                                                <img loading="lazy" width="80" height="80"
+                                                    src="assets/images/product/single/detail-10_4.jpg" alt="Image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="tf-product-info-wrap position-relative mt-lg-0">
+                            <div class="tf-zoom-main sticky-top"></div>
+                            <div class="tf-product-info-list other-image-zoom">
+                                <div class="tf-product-info-heading">
+                                    <p class="product-infor-cate text-caption-01 mb-4">
+                                        Plant Decor
+                                    </p>
+                                    <h3 class="product-infor-name mb-12">
+                                        Anthurium Hybrid
+                                    </h3>
+                                    <div class="product-infor-meta mb-20">
+                                        <div class="meta_rate">
+                                            <div class="star-wrap normal d-flex align-items-center">
+                                                <i class="icon icon-Star"></i>
+                                                <i class="icon icon-Star"></i>
+                                                <i class="icon icon-Star"></i>
+                                                <i class="icon icon-Star"></i>
+                                                <i class="icon icon-Star"></i>
+                                            </div>
+                                            <span class="text-caption-01 cl-text-2">
+                                                (134 reviews)
+                                            </span>
+                                        </div>
+                                        <div class="br-line type-vertical"></div>
+                                        <div class="meta_sold">
+                                            <i class="icon icon-Lightning text-primary"></i>
+                                            <span class="text-caption-01 cl-text-1">18 sold in last 32 hours</span>
+                                        </div>
+                                        <div class="br-line type-vertical"></div>
+                                        <div class="meta_prd_code text-caption-01">
+                                            <span class="cl-text-2">SKU:</span>
+                                            <span>53453412</span>
+                                        </div>
+                                    </div>
+                                    <div class="product-infor-price mb-12">
+                                        <h4 class="price-on-sale">$39.00</h4>
+                                        <div class="br-line type-vertical"></div>
+                                        <p class="cl-text-3 text-decoration-line-through">$45.00</p>
+                                        <span class="badge-sale text-white fw-semibold text-caption-02">
+                                            -25%
+                                        </span>
+                                    </div>
+                                    <p class="product-infor-desc cl-text-2 mb-12">
+                                        Low-maintenance and drought-tolerant, the ZZ Plant is ideal for anyone looking
+                                        to add vibrant greenery to their space that requires minimal care.
+                                    </p>
+                                    <div class="product-infor-reality lh-24">
+                                        <div class="ic d-flex">
+                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <rect width="24" height="24" rx="4" fill="#101010" />
+                                                <path
+                                                    d="M19.4569 11.7975C19.435 11.7481 18.9056 10.5738 17.7287 9.39687C16.1606 7.82875 14.18 7 12 7C9.81999 7 7.83937 7.82875 6.27124 9.39687C5.09437 10.5738 4.56249 11.75 4.54312 11.7975C4.51469 11.8614 4.5 11.9306 4.5 12.0006C4.5 12.0706 4.51469 12.1398 4.54312 12.2037C4.56499 12.2531 5.09437 13.4269 6.27124 14.6038C7.83937 16.1713 9.81999 17 12 17C14.18 17 16.1606 16.1713 17.7287 14.6038C18.9056 13.4269 19.435 12.2531 19.4569 12.2037C19.4853 12.1398 19.5 12.0706 19.5 12.0006C19.5 11.9306 19.4853 11.8614 19.4569 11.7975ZM12 14.5C11.5055 14.5 11.0222 14.3534 10.6111 14.0787C10.1999 13.804 9.87951 13.4135 9.69029 12.9567C9.50107 12.4999 9.45157 11.9972 9.54803 11.5123C9.64449 11.0273 9.88259 10.5819 10.2322 10.2322C10.5819 9.8826 11.0273 9.6445 11.5123 9.54804C11.9972 9.45157 12.4999 9.50108 12.9567 9.6903C13.4135 9.87952 13.804 10.2 14.0787 10.6111C14.3534 11.0222 14.5 11.5055 14.5 12C14.5 12.663 14.2366 13.2989 13.7678 13.7678C13.2989 14.2366 12.663 14.5 12 14.5Z"
+                                                    fill="white" />
+                                            </svg>
+                                        </div>
+                                        <span class="text-caption-01">
+                                            28 people are viewing this right now
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="br-line"></div>
+                                <div class="single-choose-option d-grid gap-20">
+                                    <div class="variant-picker-item variant-size-2 d-grid gap-12">
+                                        <div class="variant-picker-label">
+                                            <div>
+                                                Pick a Size:
+                                                <span
+                                                    class="variant-picker-label-value value-currentSize text-capitalize fw-medium">Large
+                                                    (2-3' tall)</span>
+                                            </div>
+                                            <a href="#findSize" data-bs-toggle="modal"
+                                                class="tf-btn-line-2 style-primary text-caption-01 fw-semibold">
+                                                Size Guide
+                                            </a>
+                                        </div>
+                                        <div class="variant-picker-values">
+                                            <span class="size-btn active" data-size="Large (2-3' tall)"
+                                                data-price="39.99">
+                                                Large (2-3' tall)
+                                            </span>
+                                            <span class="size-btn" data-size="Small (10–14' tall)" data-price="59.99">
+                                                Small (10–14" tall)
+                                            </span>
+                                            <span class="size-btn " data-size="Medium (20-26' tall)" data-price="59.99">
+                                                Medium (20-26" tall)
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="tf-product-variant">
+                                        <div class="tf-product-total-quantity">
+                                            <p class="">
+                                                Quantity:
+                                            </p>
+                                            <div class="group-action">
+                                                <div class="wg-quantity">
+                                                    <button class="btn-quantity btn-decrease">
+                                                        <i class="icon icon-minus"></i>
+                                                    </button>
+                                                    <input class="quantity-product" type="text" name="number" value="1">
+                                                    <button class="btn-quantity btn-increase">
+                                                        <i class="icon icon-plus"></i>
+                                                    </button>
+                                                </div>
+                                                <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                                    class="btn-action-price tf-btn type-xl animate-btn w-100">
+                                                    Add To Cart
+                                                    <span
+                                                        class="d-none d-sm-block d-md-none d-lg-block">&nbsp;-&nbsp;</span>
+                                                    <span
+                                                        class="price-add d-none d-sm-block d-md-none d-lg-block">$79.99</span>
+                                                </a>
+                                            </div>
+                                            <a href="#shoppingCart" data-bs-toggle="offcanvas"
+                                                class="tf-btn type-xl btn-secondary animate-btn w-100">
+                                                Buy It Now
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="tf-product-extra-link">
+                                        <a href="#compare" data-bs-toggle="offcanvas"
+                                            class="product-extra-icon link fw-medium">
+                                            <i class="icon icon-ArrowsLeftRight"></i>
+                                            Compare
+                                        </a>
+                                        <a href="#ask" data-bs-toggle="modal" class="product-extra-icon link fw-medium">
+                                            <i class="icon icon-Question"></i>
+                                            Ask A Question
+                                        </a>
+                                        <a href="#findSize" data-bs-toggle="modal"
+                                            class="product-extra-icon link fw-medium">
+                                            <i class="icon icon-Ruler"></i>
+                                            Size Guide
+                                        </a>
+                                        <a href="#share" data-bs-toggle="modal"
+                                            class="product-extra-icon link fw-medium">
+                                            <i class="icon icon-ShareNetwork"></i>
+                                            Share
+                                        </a>
+                                    </div>
+                                    <div class="">
+                                        <a href="product-detail.html"
+                                            class="tf-btn-line-2 fw-semibold style-primary pb-4">
+                                            View All Details
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Banner Product Single -->
+        <!-- Blog -->
+        <section class="flat-spacing">
+            <div class="container">
+                <div class="sect-heading type-2 text-center wow fadeInUp">
+                    <h3 class="s-title">
+                        Guides, Tips & Inspiration
+                    </h3>
+                    <p class="s-desc text-body-1 cl-text-2">
+                        Helpful plant knowledge, simple care, creative greenery styling.
+                    </p>
+                </div>
+                <div dir="ltr" class="swiper tf-swiper" data-preview="3" data-tablet="2" data-mobile-sm="2"
+                    data-mobile="1" data-space-lg="30" data-space-md="20" data-space="10" data-pagination="1"
+                    data-pagination-sm="2" data-pagination-md="2" data-pagination-lg="3">
+                    <div class="swiper-wrapper">
+                        <!-- slide 1 -->
+                        <div class="swiper-slide">
+                            <article class="article-blog style-3 hover-img wow fadeInUp">
+                                <a href="blog-single.html" class="blog-image img-style">
+                                    <img loading="lazy" width="450" height="450" src="assets/images/blog/blog-32.jpg"
+                                        alt="Image">
+                                    <div class="wrap-tags">
+                                        <span class="tag fw-semibold text-caption-01">PLANT</span>
+                                    </div>
+                                </a>
+                                <div class="blog-content">
+                                    <p class="entry-date text-caption-01 fw-semibold cl-text-3">13 August</p>
+                                    <h5 class="entry-title">
+                                        <a href="blog-single.html" class="link-underline link">
+                                            Finding Balance In Everyday Moments With Simple Daily Mindfulness
+                                        </a>
+                                    </h5>
+                                    <p class="entry-desc cl-text-2">
+                                        Discover simple practices that help you slow down, recharge, and reconnect with
+                                        what matters.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- slide 2 -->
+                        <div class="swiper-slide">
+                            <article class="article-blog style-3 hover-img wow fadeInUp">
+                                <a href="blog-single.html" class="blog-image img-style">
+                                    <img loading="lazy" width="450" height="450" src="assets/images/blog/blog-33.jpg"
+                                        alt="Image">
+                                    <div class="wrap-tags">
+                                        <span class="tag fw-semibold text-caption-01">CARE</span>
+                                    </div>
+                                </a>
+                                <div class="blog-content">
+                                    <p class="entry-date text-caption-01 fw-semibold cl-text-3">15 August</p>
+                                    <h5 class="entry-title">
+                                        <a href="blog-single.html" class="link-underline link">
+                                            Creating Calm Through Green Spaces For A Peaceful Home Life
+                                        </a>
+                                    </h5>
+                                    <p class="entry-desc cl-text-2">
+                                        Learn how small indoor plants can boost clarity, reduce stress, and elevate your
+                                        daily environment.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- slide 3 -->
+                        <div class="swiper-slide">
+                            <article class="article-blog style-3 hover-img wow fadeInUp">
+                                <a href="blog-single.html" class="blog-image img-style">
+                                    <img loading="lazy" width="450" height="450" src="assets/images/blog/blog-34.jpg"
+                                        alt="Image">
+                                    <div class="wrap-tags">
+                                        <span class="tag fw-semibold text-caption-01">GARDEN</span>
+                                    </div>
+                                </a>
+                                <div class="blog-content">
+                                    <p class="entry-date text-caption-01 fw-semibold cl-text-3">18 August</p>
+                                    <h5 class="entry-title">
+                                        <a href="blog-single.html" class="link-underline link">
+                                            Habits That Support A Happier Mind And Stronger Inner Wellbeing
+                                        </a>
+                                    </h5>
+                                    <p class="entry-desc cl-text-2">
+                                        Easy routines and mindful shifts that bring more positivity and steadiness into
+                                        your life.
+                                    </p>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="sw-line-default style-2 tf-sw-pagination"></div>
+                </div>
+            </div>
+        </section>
+        <!-- /Blog -->
+        <!-- Box Icon -->
+        <div class="flat-spacing ">
+            <div class="container">
+                <div dir="ltr" class="swiper tf-swiper" data-preview="4" data-tablet="3" data-mobile-sm="2"
+                    data-mobile="1" data-space-lg="60.67" data-space-md="33" data-space="13" data-pagination="1"
+                    data-pagination-sm="2" data-pagination-md="3" data-pagination-lg="4">
+                    <div class="swiper-wrapper">
+                        <!-- item 1 -->
+                        <div class="swiper-slide">
+                            <div class="box-icon_V01 has-line wow fadeInLeft">
+                                <span class="icon">
+                                    <i class="icon-Package"></i>
+                                </span>
+                                <div class="content">
+                                    <h5 class="title">Free Shipping</h5>
+                                    <p class="text cl-text-2">No extra costs, just the price you see.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item 2 -->
+                        <div class="swiper-slide">
+                            <div class="box-icon_V01 has-line wow fadeInLeft">
+                                <span class="icon">
+                                    <i class="icon-ArrowUDownLeft"></i>
+                                </span>
+                                <div class="content">
+                                    <h5 class="title">14-Day Returns</h5>
+                                    <p class="text cl-text-2">Risk-free shopping with easy returns.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item 3 -->
+                        <div class="swiper-slide">
+                            <div class="box-icon_V01 has-line wow fadeInLeft">
+                                <span class="icon">
+                                    <i class="icon-Headset"></i>
+                                </span>
+                                <div class="content">
+                                    <h5 class="title">24/7 Support</h5>
+                                    <p class="text cl-text-2">24/7 support, always here just for you.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- item 4 -->
+                        <div class="swiper-slide">
+                            <div class="box-icon_V01 has-line wow fadeInLeft">
+                                <span class="icon">
+                                    <i class="icon-SealPercent"></i>
+                                </span>
+                                <div class="content">
+                                    <h5 class="title">Member Discounts</h5>
+                                    <p class="text cl-text-2">Special prices for our loyal customers.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sw-dot-default tf-sw-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /Box Icon -->
+        <!-- Gallery -->
+        <div class="mb-10">
+            <div class="container-full-4">
+                <div dir="ltr" class="swiper tf-swiper" data-preview="5" data-tablet="3" data-mobile-sm="3"
+                    data-mobile="2" data-space="10" data-pagination="2" data-pagination-sm="3" data-pagination-md="4"
+                    data-pagination-lg="5">
+                    <div class="swiper-wrapper">
+                        <!-- slide 1 -->
+                        <div class="swiper-slide">
+                            <div class="gallery-item style-2 rounded-0 hover-img hover-overlay wow fadeInUp">
+                                <div class="image img-style">
+                                    <img loading="lazy" width="346" height="346"
+                                        src="assets/images/gallery/gallery-42.jpg" alt="Image">
+                                </div>
+                                <a href="product-detail.html" class="box-icon hover-tooltip">
+                                    <span class="icon icon-Eye"></span>
+                                    <span class="tooltip">View product</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- slide 2 -->
+                        <div class="swiper-slide">
+                            <div class="gallery-item style-2 rounded-0 hover-img hover-overlay wow fadeInUp">
+                                <div class="image img-style">
+                                    <img loading="lazy" width="346" height="346"
+                                        src="assets/images/gallery/gallery-43.jpg" alt="Image">
+                                </div>
+                                <a href="product-detail.html" class="box-icon hover-tooltip">
+                                    <span class="icon icon-Eye"></span>
+                                    <span class="tooltip">View product</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- slide 3 -->
+                        <div class="swiper-slide">
+                            <div class="gallery-item style-2 rounded-0 hover-img hover-overlay wow fadeInUp">
+                                <div class="image img-style">
+                                    <img loading="lazy" width="346" height="346"
+                                        src="assets/images/gallery/gallery-44.jpg" alt="Image">
+                                </div>
+                                <a href="product-detail.html" class="box-icon hover-tooltip">
+                                    <span class="icon icon-Eye"></span>
+                                    <span class="tooltip">View product</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- slide 4 -->
+                        <div class="swiper-slide">
+                            <div class="gallery-item style-2 rounded-0 hover-img hover-overlay wow fadeInUp">
+                                <div class="image img-style">
+                                    <img loading="lazy" width="346" height="346"
+                                        src="assets/images/gallery/gallery-45.jpg" alt="Image">
+                                </div>
+                                <a href="product-detail.html" class="box-icon hover-tooltip">
+                                    <span class="icon icon-Eye"></span>
+                                    <span class="tooltip">View product</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- slide 5 -->
+                        <div class="swiper-slide">
+                            <div class="gallery-item style-2 rounded-0 hover-img hover-overlay wow fadeInUp">
+                                <div class="image img-style">
+                                    <img loading="lazy" width="346" height="346"
+                                        src="assets/images/gallery/gallery-46.jpg" alt="Image">
+                                </div>
+                                <a href="product-detail.html" class="box-icon hover-tooltip">
+                                    <span class="icon icon-Eye"></span>
+                                    <span class="tooltip">View product</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sw-dot-default tf-sw-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /Gallery -->
         <!-- Footer -->
         <footer class="tf-footer footer-s2 type-reverse bg-main-6">
             <div class="position-relative">
@@ -946,7 +2846,6 @@
                 <div class="container">
                     <div class="footer-inner flat-spacing-2">
                         <div class="br-line fake-class bg-white_10 bottom-0"></div>
-
                         <div class="col-left">
                             <div class="footer-col-block type-white footer-wrap-3 ms-0 mb-sm-0">
                                 <p class="footer-heading footer-heading-mobile text-white">NEWSLETTER</p>
@@ -1215,7 +3114,7 @@
                             <p class="orther-log text-center">
                                 Remember your password?
                                 <a href="#sign" data-bs-toggle="modal" class="text-primary text-decoration-underline">
-                                    Sign Up
+                                    Sign In
                                 </a>
                             </p>
                         </div>
@@ -1771,7 +3670,7 @@
         <div class="tf-minicart-recommendations file-delete">
             <div class="title d-flex justify-content-between align-items-center">
                 <h5>You Might Like</h5>
-                <i class="icon icon-X2 link remove fs-24"></i>
+                <i class="icon icon-X2 link remove fs-24 cs-pointer"></i>
             </div>
             <div class="wrap-recommendations">
                 <div class="list-cart">
@@ -2240,7 +4139,7 @@
                         <i class="icon-X2"></i>
                     </span>
                 </div>
-                <form class="form-search-nav style-2">
+                <form action="search-result.html" class="form-search-nav style-2">
                     <fieldset>
                         <input type="text" placeholder="Searching..." required>
                     </fieldset>
@@ -2302,7 +4201,7 @@
                                             <a href="#quickAdd" data-bs-toggle="modal"
                                                 class="tf-btn btn-white small animate-btn animate-dark w-100">
                                                 Quick Add
-                                                <i class="icon icon-view"></i>
+
                                             </a>
                                         </div>
                                         <div class="product-marquee_sale">
@@ -2423,7 +4322,7 @@
                                             <a href="#shoppingCart" data-bs-toggle="offcanvas"
                                                 class="tf-btn btn-white small animate-btn animate-dark w-100">
                                                 Add to cart
-                                                <i class="icon icon-view"></i>
+
                                             </a>
                                         </div>
                                     </div>
@@ -2500,7 +4399,7 @@
                                             <a href="#shoppingCart" data-bs-toggle="offcanvas"
                                                 class="tf-btn btn-white small animate-btn animate-dark w-100">
                                                 Add to cart
-                                                <i class="icon icon-view"></i>
+
                                             </a>
                                         </div>
                                     </div>
@@ -2580,7 +4479,7 @@
                                             <a href="#shoppingCart" data-bs-toggle="offcanvas"
                                                 class="tf-btn btn-white small animate-btn animate-dark w-100">
                                                 Add to cart
-                                                <i class="icon icon-view"></i>
+
                                             </a>
                                         </div>
                                         <div class="product-countdown">
@@ -2638,7 +4537,7 @@
                     <p class="desc-pop cl-text-2">Be part of our growing family of new customers!</p>
                 </div>
                 <div class="modal-main">
-                    <form class="form-log">
+                    <form action="account-page.html" class="form-log">
                         <div class="form-content">
                             <fieldset class="tf-field">
                                 <label for="user-name" class="tf-lable fw-medium">Username or email address <span
@@ -2694,7 +4593,7 @@
                     <p class="desc-pop cl-text-2">Sign in to access your personalized experience.</p>
                 </div>
                 <div class="modal-main">
-                    <form class="form-log">
+                    <form action="account-page.html" class="form-log">
                         <div class="form-content">
                             <fieldset class="tf-field">
                                 <label for="user-name-log" class="tf-lable fw-medium">Username or email address <span
@@ -2741,6 +4640,193 @@
     </div>
     <!-- /Sign In -->
 
+    <!-- All Demo -->
+    <!-- <div class="modal modalCentered fade modalDemo" id="modalDemo">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="top">
+                    <h4 class="demo-title">Ultimate HTML Theme</h4>
+                    <span class="icon-X2 btn-close-popup link cs-pointer" data-bs-dismiss="modal"></span>
+                </div>
+                <div class="mega-menu">
+                    <div class="row-demo">
+                        <div class="demo-item">
+                            <a href="index.html" class="demo-img">
+                                <img src="assets/images/demo/home-1.jpg" alt="Demo">
+                            </a>
+                            <a href="index.html" class="demo-name">
+                                Main Demo <span class="demo-label type-hot">Hot</span>
+                            </a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-mental.html" class="demo-img">
+                                <img src="assets/images/demo/home-2.jpg" alt="Demo">
+                            </a>
+                            <a href="home-mental.html" class="demo-name">
+                                Home Mental <span class="demo-label type-new">New</span>
+                            </a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-electronics.html" class="demo-img">
+                                <img src="assets/images/demo/home-3.jpg" alt="Demo">
+                            </a>
+                            <a href="home-electronics.html" class="demo-name">
+                                Home Electronics
+                            </a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-pod.html" class="demo-img">
+                                <img src="assets/images/demo/home-4.jpg" alt="Demo">
+                            </a>
+                            <a href="home-pod.html" class="demo-name">
+                                Home POD <span class="demo-label type-new">New</span>
+                            </a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-pet-care.html" class="demo-img">
+                                <img src="assets/images/demo/home-5.jpg" alt="Demo">
+                            </a>
+                            <a href="home-pet-care.html" class="demo-name">
+                                Home Pet Care <span class="demo-label type-trend">Trend</span>
+                            </a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-baby.html" class="demo-img">
+                                <img src="assets/images/demo/home-6.jpg" alt="Demo">
+                            </a>
+                            <a href="home-baby.html" class="demo-name">
+                                Home Baby <span class="demo-label type-hot">Hot</span>
+                            </a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-auto.html" class="demo-img">
+                                <img src="assets/images/demo/home-7.jpg" alt="Demo">
+                            </a>
+                            <a href="home-auto.html" class="demo-name">
+                                Home Auto <span class="demo-label type-trend">Trend</span>
+                            </a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-decor.html" class="demo-img">
+                                <img src="assets/images/demo/home-8.jpg" alt="Demo">
+                            </a>
+                            <a href="home-decor.html" class="demo-name">
+                                Home Decor <span class="demo-label type-new">New</span>
+                            </a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-cosmetic.html" class="demo-img">
+                                <img src="assets/images/demo/home-9.jpg" alt="Demo">
+                            </a>
+                            <a href="home-cosmetic.html" class="demo-name">
+                                Home Cosmetic
+                            </a>
+                        </div>
+                        <div class="demo-item">
+                            <a href="home-organic.html" class="demo-img">
+                                <img src="assets/images/demo/home-10.jpg" alt="Demo">
+                            </a>
+                            <a href="home-organic.html" class="demo-name">
+                                Home Organic <span class="demo-label type-hot">Hot</span>
+                            </a>
+                        </div>
+
+
+                        <div class="demo-item soon">
+                            <a href="#" class="demo-img">
+                                <img src="assets/images/demo/home-11.jpg" alt="Demo">
+                            </a>
+                            <a href="#" class="demo-name">
+                                Home Fashion <span class="demo-label type-soon">Soon</span>
+                            </a>
+                        </div>
+                        <div class="demo-item soon">
+                            <a href="#" class="demo-img">
+                                <img src="assets/images/demo/home-12.jpg" alt="Demo">
+                            </a>
+                            <a href="#" class="demo-name">
+                                Home Headphone <span class="demo-label type-soon">Soon</span>
+                            </a>
+                        </div>
+                        <div class="demo-item soon">
+                            <a href="#" class="demo-img">
+                                <img src="assets/images/demo/home-13.jpg" alt="Demo">
+                            </a>
+                            <a href="#" class="demo-name">
+                                Home Jewellry <span class="demo-label type-soon">Soon</span>
+                            </a>
+                        </div>
+                        <div class="demo-item soon">
+                            <a href="#" class="demo-img">
+                                <img src="assets/images/demo/home-14.jpg" alt="Demo">
+                            </a>
+                            <a href="#" class="demo-name">
+                                Home Gardent <span class="demo-label type-soon">Soon</span>
+                            </a>
+                        </div>
+                        <div class="demo-item soon">
+                            <a href="#" class="demo-img">
+                                <img src="assets/images/demo/home-15.jpg" alt="Demo">
+                            </a>
+                            <a href="#" class="demo-name">
+                                Home Construct <span class="demo-label type-soon">Soon</span>
+                            </a>
+                        </div>
+                        <div class="demo-item soon">
+                            <a href="#" class="demo-img">
+                                <img src="assets/images/demo/home-16.jpg" alt="Demo">
+                            </a>
+                            <a href="#" class="demo-name">
+                                Home Furniture <span class="demo-label type-soon">Soon</span>
+                            </a>
+                        </div>
+                        <div class="demo-item soon">
+                            <a href="#" class="demo-img">
+                                <img src="assets/images/demo/home-16.jpg" alt="Demo">
+                            </a>
+                            <a href="#" class="demo-name">
+                                Home Fashion 2 <span class="demo-label type-soon">Soon</span>
+                            </a>
+                        </div>
+                        <div class="demo-item soon">
+                            <a href="#" class="demo-img">
+                                <img src="assets/images/demo/home-16.jpg" alt="Demo">
+                            </a>
+                            <a href="#" class="demo-name">
+                                Home Bag <span class="demo-label type-soon">Soon</span>
+                            </a>
+                        </div>
+                        <div class="demo-item soon">
+                            <a href="#" class="demo-img">
+                                <img src="assets/images/demo/home-16.jpg" alt="Demo">
+                            </a>
+                            <a href="#" class="demo-name">
+                                Home Sport <span class="demo-label type-soon">Soon</span>
+                            </a>
+                        </div>
+                        <div class="demo-item soon">
+                            <a href="#" class="demo-img">
+                                <img src="assets/images/demo/home-16.jpg" alt="Demo">
+                            </a>
+                            <a href="#" class="demo-name">
+                                Home Office <span class="demo-label type-soon">Soon</span>
+                            </a>
+                        </div>
+                        <div class="demo-item soon d-none">
+                            <a href="#" class="demo-img">
+                                <img src="assets/images/demo/home-16.jpg" alt="Demo">
+                            </a>
+                            <a href="#" class="demo-name">
+                                Home Fashion 3 <span class="demo-label type-soon">Soon</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- /All Demo -->
+
     <!-- Javascript -->
 
     <script src="assets/js/plugin/bootstrap.min.js"></script>
@@ -2750,10 +4836,13 @@
     <script src="assets/js/plugin/count-down.js"></script>
     <script src="assets/js/plugin/infinityslide.js"></script>
     <script src="assets/js/plugin/wow.min.js"></script>
-
-
+    <script src="assets/js/plugin/parallaxie.js"></script>
+    <script src="assets/js/zoom.js"></script>
     <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/plugin/drift.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/plugin/photoswipe-lightbox.umd.min.js"></script>
+    <script src="assets/js/plugin/photoswipe.umd.min.js"></script>
 </body>
 
 </html>
