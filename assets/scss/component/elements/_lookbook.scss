@@ -63,6 +63,14 @@
             color: var(--white);
         }
     }
+
+    &.style-2 {
+        &.show {
+            span {
+                background-color: var(--text);
+            }
+        }
+    }
 }
 
 .banner-lookbook {
@@ -99,8 +107,8 @@
     }
 
     .position5 {
-        top: 39.8%;
-        left: 69.7%;
+        top: 51.8%;
+        left: 61.7%;
     }
 
     .position6 {
@@ -121,6 +129,81 @@
     .position9 {
         top: 83%;
         left: 81%;
+    }
+
+    .position10 {
+        top: 69%;
+        left: 24.5%;
+    }
+
+    .position11 {
+        top: 42.7%;
+        left: 11.9%;
+    }
+
+    .position12 {
+        top: 84%;
+        left: 62%;
+    }
+
+    .position13 {
+        top: 9%;
+        right: 67%;
+    }
+
+    .position14 {
+        top: 64%;
+        left: 44%;
+    }
+
+    .position15 {
+        top: 9.4%;
+        left: 69.5%;
+    }
+
+    .position16 {
+        top: 74.2%;
+        left: 27.5%;
+    }
+
+    .position17 {
+        top: 84.4%;
+        left: 52.5%;
+    }
+
+    .position18 {
+        top: 62.4%;
+        left: 42.5%;
+    }
+
+    .position19 {
+        top: 29.2%;
+        left: 21.5%;
+    }
+
+    .position20 {
+        top: 73%;
+        left: 38%;
+    }
+
+    .position21 {
+        top: 76%;
+        left: 74%;
+    }
+
+    .position22 {
+        top: 27.2%;
+        left: 39.5%;
+    }
+
+    .position23 {
+        top: 48.2%;
+        left: 34.5%;
+    }
+
+    .position24 {
+        top: 37.8%;
+        left: 44.7%;
     }
 
     .dropdown-menu {
@@ -180,6 +263,27 @@
         .img-banner {
             min-height: 450px;
         }
+
+        @include res(sm) {
+            .lookbook-product {
+                margin: 15px;
+                border-radius: 8px;
+            }
+        }
+    }
+
+    &.style-3 {
+        height: unset;
+
+        .img-banner {
+            min-height: 200px;
+        }
+    }
+
+    @include res(sm, min) {
+        .dropdown-menu {
+            z-index: 99;
+        }
     }
 
     @include res(lg, min) {
@@ -219,7 +323,6 @@
 
         .lookbook-product {
             @include transition3;
-            // transform: translateY(20px);
             border-radius: 0;
             width: 100%;
         }
@@ -237,14 +340,10 @@
             align-items: end;
             @include hidden;
             @include transition3;
+            background: rgba(0, 0, 0, 0.5);
 
             &.show {
-                background: rgba(0, 0, 0, 0.5);
                 @include visible;
-
-                .lookbook-product {
-                    // transform: translateY(0px);
-                }
             }
 
             &.pst-2 {
@@ -294,17 +393,24 @@
     @include res(lg) {
         min-width: 250px;
     }
+
+    @include res(sm) {
+        box-shadow: unset;
+        border: 1px solid var(--line);
+    }
 }
 
 .wrap-lookbook_hover {
-    .lookbook-item {
-        opacity: 1;
-        @include transition3;
-    }
+    @include res(sm, min) {
+        .lookbook-item {
+            opacity: 1;
+            @include transition3;
+        }
 
-    &:has(.lookbook-item:hover) {
-        .lookbook-item:not(:hover) {
-            opacity: 0.5;
+        &:has(.lookbook-item:hover) {
+            .lookbook-item:not(:hover) {
+                opacity: 0.5;
+            }
         }
     }
 }

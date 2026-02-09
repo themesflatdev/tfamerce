@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ilcem2');
-  src:  url('fonts/icomoon.eot?ilcem2#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ilcem2') format('truetype'),
-    url('fonts/icomoon.woff?ilcem2') format('woff'),
-    url('fonts/icomoon.svg?ilcem2#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?bwkm1b');
+  src:  url('fonts/icomoon.eot?bwkm1b#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?bwkm1b') format('truetype'),
+    url('fonts/icomoon.woff?bwkm1b') format('woff'),
+    url('fonts/icomoon.svg?bwkm1b#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-Exclude:before {
+  content: "\e95f";
+}
+.icon-Feather:before {
+  content: "\e960";
+}
+.icon-ShieldCheck:before {
+  content: "\e961";
+}
+.icon-SneakerMove:before {
+  content: "\e962";
+}
+.icon-Sparkle:before {
+  content: "\e963";
+}
+.icon-Wind:before {
+  content: "\e964";
+}
 .icon-Star-3:before {
   content: "\e95e";
 }
@@ -286,6 +304,9 @@
 .icon-Star:before {
   content: "\e92c";
 }
+.icon-Star-thin:before {
+  content: "\e965";
+}
 .icon-Tag:before {
   content: "\e92d";
 }
@@ -298,11 +319,18 @@
 .icon-Truck:before {
   content: "\e930";
 }
+.icon-Truck2:before {
+  content: "\e967";
+}
 .icon-User:before {
   content: "\e931";
 }
 .icon-Vector:before {
   content: "\e932";
+  color: #3dab25;
+}
+.icon-CheckCircle1:before {
+  content: "\e966";
   color: #3dab25;
 }
 .icon-X:before {

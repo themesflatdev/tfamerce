@@ -1,49 +1,96 @@
-const element = document.getElementById("image-compare");
-const options = {
+(() => {
+  const imageCompareElement = document.getElementById("image-compare");
+  if (!imageCompareElement) return;
+
+  const options = {
     controlColor: "#FFFFFF",
     controlShadow: false,
     addCircle: true,
     addCircleBlur: true,
     smoothing: false,
     showLabels: true,
-    labelOptions: {
-        before: "Before",
-        after: "After",
-    },
+    labelOptions: { before: "Before", after: "After" },
     maxHeight: 300,
-};
+  };
 
-const viewer1 = new ImageCompare(element, options).mount();
+  new ImageCompare(imageCompareElement, options).mount();
 
-const imageCompareElement = document.getElementById("image-compare");
-const labelBefore = imageCompareElement.querySelector(".icv__label-before");
-const labelAfter = imageCompareElement.querySelector(".icv__label-after");
-const control = imageCompareElement.querySelector(".icv__control");
+  function getControl() {
+    return imageCompareElement.querySelector(".icv__control");
+  }
+  function getLabelBefore() {
+    return imageCompareElement.querySelector(".icv__label-before");
+  }
+  function getLabelAfter() {
+    return imageCompareElement.querySelector(".icv__label-after");
+  }
 
-function adjustLabelOpacity() {
+  function isOverlapX(a, b) {
+    return a.left < b.right && a.right > b.left;
+  }
+
+  function adjustLabelOpacity() {
+    const control = getControl();
+    const lb = getLabelBefore();
+    const la = getLabelAfter();
+    if (!control || !lb || !la) return;
+
     const controlRect = control.getBoundingClientRect();
-    const beforeRect = labelBefore.getBoundingClientRect();
-    const afterRect = labelAfter.getBoundingClientRect();
+    const beforeRect = lb.getBoundingClientRect();
+    const afterRect = la.getBoundingClientRect();
 
-    if (controlRect.right > beforeRect.left && controlRect.left < beforeRect.right) {
-        labelBefore.style.opacity = "0";
-    } else {
-        labelBefore.style.opacity = "1";
+    lb.style.opacity = isOverlapX(controlRect, beforeRect) ? "0" : "1";
+    la.style.opacity = isOverlapX(controlRect, afterRect) ? "0" : "1";
+  }
+
+  // RAF cho mượt
+  let rafId = 0;
+  function rafAdjust() {
+    if (rafId) cancelAnimationFrame(rafId);
+    rafId = requestAnimationFrame(() => {
+      rafId = 0;
+      adjustLabelOpacity();
+    });
+  }
+
+  // Events: container + control + document drag
+  imageCompareElement.addEventListener("mousemove", rafAdjust, { passive: true });
+  imageCompareElement.addEventListener("touchmove", rafAdjust, { passive: true });
+
+  let dragging = false;
+
+  function onPointerDown(e) {
+    const control = getControl();
+    if (control && (e.target === control || control.contains(e.target))) {
+      dragging = true;
+      rafAdjust();
     }
-
-    if (controlRect.left < afterRect.right && controlRect.right > afterRect.left) {
-        labelAfter.style.opacity = "0";
-    } else {
-        labelAfter.style.opacity = "1";
+  }
+  function onPointerMove() {
+    if (dragging) rafAdjust();
+  }
+  function onPointerUp() {
+    if (dragging) {
+      dragging = false;
+      rafAdjust();
     }
-}
+  }
 
-imageCompareElement.addEventListener("mousemove", adjustLabelOpacity);
-imageCompareElement.addEventListener(
-    "touchmove",
-    (event) => {
-        event.preventDefault();
-        adjustLabelOpacity();
-    },
-    { passive: false }
-);
+  document.addEventListener("pointerdown", onPointerDown, { passive: true });
+  document.addEventListener("pointermove", onPointerMove, { passive: true });
+  document.addEventListener("pointerup", onPointerUp, { passive: true });
+
+  // Init + retry vì label/control có thể sinh ra sau mount
+  window.addEventListener("load", rafAdjust);
+  window.addEventListener("resize", rafAdjust);
+
+  let tries = 0;
+  const t = setInterval(() => {
+    tries++;
+    rafAdjust();
+    if (getControl() && getLabelBefore() && getLabelAfter()) clearInterval(t);
+    if (tries >= 30) clearInterval(t);
+  }, 50);
+
+  setTimeout(rafAdjust, 0);
+})();

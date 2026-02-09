@@ -131,8 +131,7 @@ body {
     background: var(--white);
 
     &::-webkit-scrollbar {
-        width: 3px; //
-        // height: 1px;
+        width: 0px; //
     }
 
     &::-webkit-scrollbar-thumb {
@@ -170,26 +169,6 @@ table {
     border-collapse: collapse;
 }
 
-thead {
-    // background-color: var(--line-8);
-}
-
-tbody {
-    tr {
-        &:nth-child(even) {
-            // background-color: var(--line-8);
-        }
-    }
-}
-
-tr {
-    th {
-        &:not(:first-child) {
-            // border-left: 1px solid var(--white);
-        }
-    }
-}
-
 td,
 th {
     padding: 0px 0px 12px;
@@ -210,7 +189,6 @@ button {
 
 select,
 option {
-    // all: unset;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -539,11 +517,7 @@ p {
     }
 }
 
-@include res(xxxl, min) {
-    .d-xxxl-flex {
-        display: flex !important;
-    }
-}
+
 
 .w-maxcontent {
     width: max-content !important;
