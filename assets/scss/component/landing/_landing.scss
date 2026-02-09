@@ -1,17 +1,21 @@
-@use "../../abstracts/index" as *;
+@use "../../abstracts/index"as *;
 
 .body-landing {
     background: #0e0c0b;
     color: var(--white);
     padding: 0;
+
     #goTop {
-        background: #0e0c0b;
+        // background: #0e0c0b;
+
         .icon {
-            color: var(--white);
+            // color: var(--white);
         }
+
         .border-progress {
-            border-color: var(--white);
+            // border-color: var(--white);
         }
+
         @include res(xl) {
             bottom: 40px;
         }
@@ -323,8 +327,7 @@
     }
 }
 
-.counter-potent {
-}
+.counter-potent {}
 
 .land-heading {
     display: flex;
@@ -410,21 +413,26 @@
         &.item-4 {
             text-align: center;
         }
+
         .list-fe {
             display: flex;
             align-items: center;
             gap: 40px;
+
             svg {
                 width: 68px;
                 height: auto;
             }
+
             @include res(md) {
                 gap: 30px;
             }
         }
+
         &.item-4 {
             padding-bottom: 0;
             justify-content: space-between;
+
             @include res(md, min) {
                 padding-top: 40px;
             }
@@ -674,8 +682,7 @@
         }
     }
 
-    @include res(xl, min) {
-    }
+    @include res(xl, min) {}
 
     @include res(lg) {
         .demo_tag {
@@ -716,7 +723,7 @@
         margin-left: -10px !important;
         margin-right: -10px !important;
 
-        > * {
+        >* {
             padding-left: 10px !important;
             padding-right: 10px !important;
         }
@@ -790,6 +797,7 @@
     }
 
     @include res(xxl) {
+
         &::after,
         &::before {
             width: 10%;
@@ -826,32 +834,28 @@
     .col-right {
         display: flex;
         gap: 16px;
-        -webkit-mask-image: linear-gradient(
-            180deg,
-            rgba(16, 16, 16, 0) 0%,
-            rgba(16, 16, 16, 0.1) 4.85%,
-            rgba(16, 16, 16, 0.8) 9.81%,
-            #101010 49.61%,
-            rgba(16, 16, 16, 0.8) 90.18%,
-            rgba(16, 16, 16, 0.1) 94.91%,
-            rgba(16, 16, 16, 0) 100%
-        );
+        -webkit-mask-image: linear-gradient(180deg,
+                rgba(16, 16, 16, 0) 0%,
+                rgba(16, 16, 16, 0.1) 4.85%,
+                rgba(16, 16, 16, 0.8) 9.81%,
+                #101010 49.61%,
+                rgba(16, 16, 16, 0.8) 90.18%,
+                rgba(16, 16, 16, 0.1) 94.91%,
+                rgba(16, 16, 16, 0) 100%);
         -webkit-mask-mode: alpha;
         -webkit-mask-repeat: no-repeat;
-        mask-image: linear-gradient(
-            180deg,
-            rgba(16, 16, 16, 0) 0%,
-            rgba(16, 16, 16, 0.1) 4.85%,
-            rgba(16, 16, 16, 0.8) 9.81%,
-            #101010 49.61%,
-            rgba(16, 16, 16, 0.8) 90.18%,
-            rgba(16, 16, 16, 0.1) 94.91%,
-            rgba(16, 16, 16, 0) 100%
-        );
+        mask-image: linear-gradient(180deg,
+                rgba(16, 16, 16, 0) 0%,
+                rgba(16, 16, 16, 0.1) 4.85%,
+                rgba(16, 16, 16, 0.8) 9.81%,
+                #101010 49.61%,
+                rgba(16, 16, 16, 0.8) 90.18%,
+                rgba(16, 16, 16, 0.1) 94.91%,
+                rgba(16, 16, 16, 0) 100%);
         mask-mode: alpha;
         mask-repeat: no-repeat;
 
-        > * {
+        >* {
             width: 50%;
         }
     }
@@ -940,7 +944,7 @@
     }
 
     .bn-image {
-        background: #0e0c0b;
+        // background: #0e0c0b;
         position: relative;
 
         .overlay {
@@ -1069,32 +1073,28 @@
     .col-right {
         display: flex;
         gap: 16px;
-        -webkit-mask-image: linear-gradient(
-            180deg,
-            rgba(16, 16, 16, 0) 0%,
-            rgba(16, 16, 16, 0.1) 4.85%,
-            rgba(16, 16, 16, 0.8) 9.81%,
-            #101010 49.61%,
-            rgba(16, 16, 16, 0.8) 90.18%,
-            rgba(16, 16, 16, 0.1) 94.91%,
-            rgba(16, 16, 16, 0) 100%
-        );
+        -webkit-mask-image: linear-gradient(180deg,
+                rgba(16, 16, 16, 0) 0%,
+                rgba(16, 16, 16, 0.1) 4.85%,
+                rgba(16, 16, 16, 0.8) 9.81%,
+                #101010 49.61%,
+                rgba(16, 16, 16, 0.8) 90.18%,
+                rgba(16, 16, 16, 0.1) 94.91%,
+                rgba(16, 16, 16, 0) 100%);
         -webkit-mask-mode: alpha;
         -webkit-mask-repeat: no-repeat;
-        mask-image: linear-gradient(
-            180deg,
-            rgba(16, 16, 16, 0) 0%,
-            rgba(16, 16, 16, 0.1) 4.85%,
-            rgba(16, 16, 16, 0.8) 9.81%,
-            #101010 49.61%,
-            rgba(16, 16, 16, 0.8) 90.18%,
-            rgba(16, 16, 16, 0.1) 94.91%,
-            rgba(16, 16, 16, 0) 100%
-        );
+        mask-image: linear-gradient(180deg,
+                rgba(16, 16, 16, 0) 0%,
+                rgba(16, 16, 16, 0.1) 4.85%,
+                rgba(16, 16, 16, 0.8) 9.81%,
+                #101010 49.61%,
+                rgba(16, 16, 16, 0.8) 90.18%,
+                rgba(16, 16, 16, 0.1) 94.91%,
+                rgba(16, 16, 16, 0) 100%);
         mask-mode: alpha;
         mask-repeat: no-repeat;
 
-        > * {
+        >* {
             width: 50%;
         }
     }
@@ -1131,6 +1131,7 @@
 
 .tf-landing-footer {
     .col-left {
+
         .logo-site,
         .s-title {
             margin-bottom: 32px;
@@ -1143,6 +1144,7 @@
 
     @include res(xl) {
         .col-left {
+
             .logo-site,
             .s-title {
                 margin-bottom: 24px;
@@ -1273,8 +1275,7 @@
         }
     }
 
-    @include res(xl) {
-    }
+    @include res(xl) {}
 
     @include res(xl) {
         height: 100%;
@@ -1320,13 +1321,14 @@
 }
 
 .feature-grid_wrap {
+
     // display: flex;
     // gap: 20px;
     @include res(lg) {
         display: flex;
         flex-direction: column;
 
-        > * {
+        >* {
             height: 100%;
         }
     }
@@ -1336,7 +1338,41 @@
     position: relative;
 
     .tab-btn-wrap-v3 {
-        margin-bottom: 40px;
+        // margin-bottom: 40px;
+    }
+
+    .launch-image {
+        border-radius: 16px;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    @include res(lg, min) {
+        .tab-btn-wrap-v3 {
+            flex-direction: column;
+            // gap: 48px;
+        }
+
+        .land-heading {
+            text-align: start;
+        }
+
+    }
+
+    @include res(xl, min) {
+
+        .col-left {
+            margin-right: -30px;
+        }
+
+        .col-right {
+            padding-left: 70px;
+        }
     }
 }
 
@@ -1357,28 +1393,35 @@
         right: 0;
     }
 }
+
 .wrapper-subscribe {
     display: flex;
     gap: 60px;
+
     @include res(xl) {
         gap: 30px;
     }
+
     @include res(lg) {
         flex-direction: column;
         gap: 60px;
     }
+
     @include res(sm) {
         gap: 30px;
     }
+
     .box-left {
         max-width: 600px;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
     }
+
     .banner-img {
         position: relative;
     }
+
     .notice-sale {
         position: absolute;
         left: 3px;
@@ -1397,18 +1440,22 @@
         -o-transition: all 0.3s ease;
         transition: all 0.3s ease;
         border-radius: 8px;
+
         @include res(sm) {
             display: none;
         }
+
         .pns-thumb {
             max-width: 46px;
             position: relative;
             width: 100%;
+
             .image {
                 border-radius: 4px;
                 overflow: hidden;
             }
         }
+
         .purchase {
             padding: 4px;
             top: -6px;
@@ -1421,22 +1468,26 @@
             align-items: center;
             justify-content: center;
         }
+
         .desc {
             font-size: 12px;
             line-height: 14px;
             color: var(--white-60);
         }
+
         .title {
             font-size: 14px;
             line-height: 16px;
             margin-bottom: 8px;
             color: var(--white);
         }
+
         .text-caption-01 {
             font-size: 12px;
             line-height: 14px;
             color: var(--white-60);
         }
+
         .tf-btn-line-2.style-primary {
             color: var(--white);
             background: linear-gradient(to right, var(--primary) 50%, var(--white) 50%);
@@ -1447,52 +1498,64 @@
             transition: background-position 0.3s linear;
             font-size: 12px;
             line-height: 18px;
+
             &::after {
                 background-color: var(--white);
                 height: 1px;
             }
+
             &::before {
                 height: 1px;
             }
+
             &:hover {
                 background-position: left;
             }
         }
+
         .btn-cl-pop {
             position: absolute;
             top: 10px;
             right: 10px;
             font-size: 14px;
         }
+
         .bottom {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .pns-content {
             width: 100%;
         }
     }
+
     .note-cart {
         position: absolute;
         top: -25px;
         left: 43px;
+
         @include res(sm) {
             display: none;
         }
     }
 }
+
 .sib-form {
     padding: 0;
     font-family: $font-main;
 }
+
 .form-content_fieldset {
     display: flex;
     gap: 12px;
+
     @include res(sm) {
         flex-direction: column;
     }
 }
+
 .form-get_email {
     backdrop-filter: blur(4px);
     border-width: 1px;
@@ -1503,10 +1566,12 @@
     padding: 12px;
     border-radius: 999px;
     width: 100%;
+
     @include res(sm) {
         border-radius: 10px;
     }
 }
+
 .form-get_email .ip input {
     backdrop-filter: blur(4px);
     height: unset;
@@ -1519,41 +1584,54 @@
     border-radius: 999px;
     padding: 15px 30px !important;
     width: 100%;
+
     @include res(xl) {
         padding: 9px 20px !important;
     }
 }
+
 .form-get_email .ip input::placeholder {
     font-size: 16px;
 }
+
 #sib-container {
     background-color: transparent;
     padding: 0;
 }
+
 .sib-form-block {
     padding: 0;
     width: 100%;
 }
+
 .sib-form-block .tf-btn {
     width: 100%;
 }
+
 .fieldset-input_email {
     display: flex;
     flex-grow: 1;
 }
+
 .sib-form .entry__specification {
     margin: 0 !important;
 }
+
 .sib-form .entry__field {
     background-color: transparent;
     border: 0;
     border-radius: 0;
     margin: 0;
 }
+
 .sib-form .entry__field:focus-within {
     box-shadow: unset;
 }
 
 .section-form-subscribe .box-title {
     margin-bottom: 32px;
+}
+
+.entry__error {
+    padding-left: 15px;
 }
