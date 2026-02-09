@@ -1357,7 +1357,131 @@
         right: 0;
     }
 }
-
+.wrapper-subscribe {
+    display: flex;
+    gap: 60px;
+    @include res(xl) {
+        gap: 30px;
+    }
+    @include res(lg) {
+        flex-direction: column;
+        gap: 60px;
+    }
+    @include res(sm) {
+        gap: 30px;
+    }
+    .box-left {
+        max-width: 600px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .banner-img {
+        position: relative;
+    }
+    .notice-sale {
+        position: absolute;
+        left: 3px;
+        display: flex;
+        bottom: 110px;
+        min-width: 290px;
+        right: auto;
+        top: auto;
+        padding: 12px;
+        gap: 10px;
+        background: #292a2d;
+        box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.1215686275);
+        -webkit-transition: all 0.3s ease;
+        -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        border-radius: 8px;
+        @include res(sm) {
+            display: none;
+        }
+        .pns-thumb {
+            max-width: 46px;
+            position: relative;
+            width: 100%;
+            .image {
+                border-radius: 4px;
+                overflow: hidden;
+            }
+        }
+        .purchase {
+            padding: 4px;
+            top: -6px;
+            left: -6px;
+            padding: 6px;
+            background: var(--primary);
+            position: absolute;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .desc {
+            font-size: 12px;
+            line-height: 14px;
+            color: var(--white-60);
+        }
+        .title {
+            font-size: 14px;
+            line-height: 16px;
+            margin-bottom: 8px;
+            color: var(--white);
+        }
+        .text-caption-01 {
+            font-size: 12px;
+            line-height: 14px;
+            color: var(--white-60);
+        }
+        .tf-btn-line-2.style-primary {
+            color: var(--white);
+            background: linear-gradient(to right, var(--primary) 50%, var(--white) 50%);
+            background-size: 200% 100%;
+            background-position: right;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: background-position 0.3s linear;
+            font-size: 12px;
+            line-height: 18px;
+            &::after {
+                background-color: var(--white);
+                height: 1px;
+            }
+            &::before {
+                height: 1px;
+            }
+            &:hover {
+                background-position: left;
+            }
+        }
+        .btn-cl-pop {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 14px;
+        }
+        .bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .pns-content {
+            width: 100%;
+        }
+    }
+    .note-cart {
+        position: absolute;
+        top: -25px;
+        left: 43px;
+        @include res(sm) {
+            display: none;
+        }
+    }
+}
 .sib-form {
     padding: 0;
     font-family: $font-main;

@@ -20175,6 +20175,142 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   right: 0;
 }
 
+.wrapper-subscribe {
+  display: flex;
+  gap: 60px;
+}
+@media (max-width: 1199px) {
+  .wrapper-subscribe {
+    gap: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .wrapper-subscribe {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+@media (max-width: 575px) {
+  .wrapper-subscribe {
+    gap: 30px;
+  }
+}
+.wrapper-subscribe .box-left {
+  max-width: 600px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrapper-subscribe .banner-img {
+  position: relative;
+}
+.wrapper-subscribe .notice-sale {
+  position: absolute;
+  left: 3px;
+  display: flex;
+  bottom: 110px;
+  min-width: 290px;
+  right: auto;
+  top: auto;
+  padding: 12px;
+  gap: 10px;
+  background: #292a2d;
+  box-shadow: 0px 10px 25px 0px rgba(43, 52, 74, 0.1215686275);
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+@media (max-width: 575px) {
+  .wrapper-subscribe .notice-sale {
+    display: none;
+  }
+}
+.wrapper-subscribe .notice-sale .pns-thumb {
+  max-width: 46px;
+  position: relative;
+  width: 100%;
+}
+.wrapper-subscribe .notice-sale .pns-thumb .image {
+  border-radius: 4px;
+  overflow: hidden;
+}
+.wrapper-subscribe .notice-sale .purchase {
+  padding: 4px;
+  top: -6px;
+  left: -6px;
+  padding: 6px;
+  background: var(--primary);
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper-subscribe .notice-sale .desc {
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--white-60);
+}
+.wrapper-subscribe .notice-sale .title {
+  font-size: 14px;
+  line-height: 16px;
+  margin-bottom: 8px;
+  color: var(--white);
+}
+.wrapper-subscribe .notice-sale .text-caption-01 {
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--white-60);
+}
+.wrapper-subscribe .notice-sale .tf-btn-line-2.style-primary {
+  color: var(--white);
+  background: linear-gradient(to right, var(--primary) 50%, var(--white) 50%);
+  background-size: 200% 100%;
+  background-position: right;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.3s linear;
+  font-size: 12px;
+  line-height: 18px;
+}
+.wrapper-subscribe .notice-sale .tf-btn-line-2.style-primary::after {
+  background-color: var(--white);
+  height: 1px;
+}
+.wrapper-subscribe .notice-sale .tf-btn-line-2.style-primary::before {
+  height: 1px;
+}
+.wrapper-subscribe .notice-sale .tf-btn-line-2.style-primary:hover {
+  background-position: left;
+}
+.wrapper-subscribe .notice-sale .btn-cl-pop {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 14px;
+}
+.wrapper-subscribe .notice-sale .bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.wrapper-subscribe .notice-sale .pns-content {
+  width: 100%;
+}
+.wrapper-subscribe .note-cart {
+  position: absolute;
+  top: -25px;
+  left: 43px;
+}
+@media (max-width: 575px) {
+  .wrapper-subscribe .note-cart {
+    display: none;
+  }
+}
+
 .sib-form {
   padding: 0;
   font-family: "DM Sans", sans-serif;
