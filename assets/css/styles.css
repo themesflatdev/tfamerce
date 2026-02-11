@@ -1,6 +1,6 @@
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -46,7 +46,7 @@
 /*------------ Core CSS ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -572,7 +572,7 @@ p {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -881,7 +881,7 @@ h6,
 }
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -1760,7 +1760,7 @@ h6,
 /*------------ Layout ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -2187,7 +2187,7 @@ h6,
 /*------------ Header ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -2549,14 +2549,14 @@ header.header-sticky.tf-header-landing {
     position: relative;
     z-index: 1;
   }
-  .header-s8 .header-inner .header-left,
-  .header-s8 .header-inner .header-right {
-    flex: unset;
-  }
   .header-s8 .header-inner {
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  .header-s8 .header-inner .header-left,
+  .header-s8 .header-inner .header-right {
+    flex: unset;
   }
 }
 @media (min-width: 1440px) {
@@ -3140,11 +3140,11 @@ header.header-sticky.tf-header-landing {
   padding: 6px 0 7px;
 }
 
-.nav-ul-mb .nav-mb-item:not(:last-child) .mb-menu-link {
-  padding-bottom: 12px;
-}
 .nav-ul-mb .nav-mb-item:not(:last-child) {
   border-bottom: 1px solid var(--line);
+}
+.nav-ul-mb .nav-mb-item:not(:last-child) .mb-menu-link {
+  padding-bottom: 12px;
 }
 .nav-ul-mb .nav-mb-item:not(:first-child) .mb-menu-link {
   padding-top: 12px;
@@ -3424,7 +3424,7 @@ header.header-sticky.tf-header-landing {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -3476,7 +3476,7 @@ header.header-sticky.tf-header-landing {
 /*------------ Blog ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -3852,7 +3852,7 @@ header.header-sticky.tf-header-landing {
 /*------------ Element ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -4073,7 +4073,7 @@ header.header-sticky.tf-header-landing {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -4385,7 +4385,7 @@ header.header-sticky.tf-header-landing {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -4687,7 +4687,7 @@ header.header-sticky.tf-header-landing {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -6577,7 +6577,7 @@ header.header-sticky.tf-header-landing {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -6910,7 +6910,7 @@ header.header-sticky.tf-header-landing {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -7567,7 +7567,7 @@ select.select-3:focus {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -8045,7 +8045,7 @@ button.animate-btn::after,
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -8981,7 +8981,7 @@ button.animate-btn::after,
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -9601,7 +9601,7 @@ button.animate-btn::after,
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -10338,7 +10338,7 @@ button.animate-btn::after,
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -11175,10 +11175,6 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 @media (min-width: 1200px) {
-  .filter-drawer-wrap.canvas-filter {
-    max-width: 100% !important;
-    width: 100% !important;
-  }
   .filter-drawer-wrap {
     position: absolute;
     z-index: 90;
@@ -11190,6 +11186,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     visibility: hidden;
     box-shadow: 0 0 25px 3px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
+  }
+  .filter-drawer-wrap.canvas-filter {
+    max-width: 100% !important;
+    width: 100% !important;
   }
   .filter-drawer-wrap .tf-group-filter {
     display: flex;
@@ -11260,7 +11260,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -13263,7 +13263,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -13406,7 +13406,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -13675,7 +13675,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -13916,13 +13916,13 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   max-width: 220px;
   width: 100%;
 }
-.box-order-summary .ship-item:not(:last-child) {
-  margin-bottom: 8px;
-}
 .box-order-summary .ship-item {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+.box-order-summary .ship-item:not(:last-child) {
+  margin-bottom: 8px;
 }
 .box-order-summary .ship-item label {
   display: flex;
@@ -14338,12 +14338,12 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .tf-table-compare tr th:nth-child(2) {
   border-top-left-radius: 8px;
 }
-.tf-table-compare tr td:last-child {
-  border-right: 1px solid var(--line);
-}
 .tf-table-compare tr td {
   border-left: 1px solid var(--line);
   border-top: 1px solid var(--line);
+}
+.tf-table-compare tr td:last-child {
+  border-right: 1px solid var(--line);
 }
 .tf-table-compare tr:first-child td:first-child {
   border-top-left-radius: 8px;
@@ -14476,7 +14476,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -14790,7 +14790,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -15172,7 +15172,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -17260,11 +17260,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
 }
 
-.invoice-table thead {
-  background-color: var(--bg-2);
-}
 .invoice-table {
   color: var(--black);
+}
+.invoice-table thead {
+  background-color: var(--bg-2);
 }
 .invoice-table th {
   font-weight: 600;
@@ -17517,7 +17517,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -20439,7 +20439,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 /*------------ Footer ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
@@ -20885,7 +20885,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 /*------------ Landing ---------------- */
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
-    * Version: 1.0.0
+    * Version: 1.0.1
     * Author: Themesflat
     * Author URI: http://themesflat.com 
 
