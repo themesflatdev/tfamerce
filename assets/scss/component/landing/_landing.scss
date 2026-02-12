@@ -1,4 +1,4 @@
-@use "../../abstracts/index"as *;
+@use "../../abstracts/index" as *;
 
 .body-landing {
     background: #0e0c0b;
@@ -327,7 +327,8 @@
     }
 }
 
-.counter-potent {}
+.counter-potent {
+}
 
 .land-heading {
     display: flex;
@@ -682,7 +683,8 @@
         }
     }
 
-    @include res(xl, min) {}
+    @include res(xl, min) {
+    }
 
     @include res(lg) {
         .demo_tag {
@@ -723,7 +725,7 @@
         margin-left: -10px !important;
         margin-right: -10px !important;
 
-        >* {
+        > * {
             padding-left: 10px !important;
             padding-right: 10px !important;
         }
@@ -797,7 +799,6 @@
     }
 
     @include res(xxl) {
-
         &::after,
         &::before {
             width: 10%;
@@ -834,28 +835,32 @@
     .col-right {
         display: flex;
         gap: 16px;
-        -webkit-mask-image: linear-gradient(180deg,
-                rgba(16, 16, 16, 0) 0%,
-                rgba(16, 16, 16, 0.1) 4.85%,
-                rgba(16, 16, 16, 0.8) 9.81%,
-                #101010 49.61%,
-                rgba(16, 16, 16, 0.8) 90.18%,
-                rgba(16, 16, 16, 0.1) 94.91%,
-                rgba(16, 16, 16, 0) 100%);
+        -webkit-mask-image: linear-gradient(
+            180deg,
+            rgba(16, 16, 16, 0) 0%,
+            rgba(16, 16, 16, 0.1) 4.85%,
+            rgba(16, 16, 16, 0.8) 9.81%,
+            #101010 49.61%,
+            rgba(16, 16, 16, 0.8) 90.18%,
+            rgba(16, 16, 16, 0.1) 94.91%,
+            rgba(16, 16, 16, 0) 100%
+        );
         -webkit-mask-mode: alpha;
         -webkit-mask-repeat: no-repeat;
-        mask-image: linear-gradient(180deg,
-                rgba(16, 16, 16, 0) 0%,
-                rgba(16, 16, 16, 0.1) 4.85%,
-                rgba(16, 16, 16, 0.8) 9.81%,
-                #101010 49.61%,
-                rgba(16, 16, 16, 0.8) 90.18%,
-                rgba(16, 16, 16, 0.1) 94.91%,
-                rgba(16, 16, 16, 0) 100%);
+        mask-image: linear-gradient(
+            180deg,
+            rgba(16, 16, 16, 0) 0%,
+            rgba(16, 16, 16, 0.1) 4.85%,
+            rgba(16, 16, 16, 0.8) 9.81%,
+            #101010 49.61%,
+            rgba(16, 16, 16, 0.8) 90.18%,
+            rgba(16, 16, 16, 0.1) 94.91%,
+            rgba(16, 16, 16, 0) 100%
+        );
         mask-mode: alpha;
         mask-repeat: no-repeat;
 
-        >* {
+        > * {
             width: 50%;
         }
     }
@@ -1073,28 +1078,32 @@
     .col-right {
         display: flex;
         gap: 16px;
-        -webkit-mask-image: linear-gradient(180deg,
-                rgba(16, 16, 16, 0) 0%,
-                rgba(16, 16, 16, 0.1) 4.85%,
-                rgba(16, 16, 16, 0.8) 9.81%,
-                #101010 49.61%,
-                rgba(16, 16, 16, 0.8) 90.18%,
-                rgba(16, 16, 16, 0.1) 94.91%,
-                rgba(16, 16, 16, 0) 100%);
+        -webkit-mask-image: linear-gradient(
+            180deg,
+            rgba(16, 16, 16, 0) 0%,
+            rgba(16, 16, 16, 0.1) 4.85%,
+            rgba(16, 16, 16, 0.8) 9.81%,
+            #101010 49.61%,
+            rgba(16, 16, 16, 0.8) 90.18%,
+            rgba(16, 16, 16, 0.1) 94.91%,
+            rgba(16, 16, 16, 0) 100%
+        );
         -webkit-mask-mode: alpha;
         -webkit-mask-repeat: no-repeat;
-        mask-image: linear-gradient(180deg,
-                rgba(16, 16, 16, 0) 0%,
-                rgba(16, 16, 16, 0.1) 4.85%,
-                rgba(16, 16, 16, 0.8) 9.81%,
-                #101010 49.61%,
-                rgba(16, 16, 16, 0.8) 90.18%,
-                rgba(16, 16, 16, 0.1) 94.91%,
-                rgba(16, 16, 16, 0) 100%);
+        mask-image: linear-gradient(
+            180deg,
+            rgba(16, 16, 16, 0) 0%,
+            rgba(16, 16, 16, 0.1) 4.85%,
+            rgba(16, 16, 16, 0.8) 9.81%,
+            #101010 49.61%,
+            rgba(16, 16, 16, 0.8) 90.18%,
+            rgba(16, 16, 16, 0.1) 94.91%,
+            rgba(16, 16, 16, 0) 100%
+        );
         mask-mode: alpha;
         mask-repeat: no-repeat;
 
-        >* {
+        > * {
             width: 50%;
         }
     }
@@ -1131,7 +1140,6 @@
 
 .tf-landing-footer {
     .col-left {
-
         .logo-site,
         .s-title {
             margin-bottom: 32px;
@@ -1144,7 +1152,6 @@
 
     @include res(xl) {
         .col-left {
-
             .logo-site,
             .s-title {
                 margin-bottom: 24px;
@@ -1275,7 +1282,8 @@
         }
     }
 
-    @include res(xl) {}
+    @include res(xl) {
+    }
 
     @include res(xl) {
         height: 100%;
@@ -1321,14 +1329,13 @@
 }
 
 .feature-grid_wrap {
-
     // display: flex;
     // gap: 20px;
     @include res(lg) {
         display: flex;
         flex-direction: column;
 
-        >* {
+        > * {
             height: 100%;
         }
     }
@@ -1361,11 +1368,9 @@
         .land-heading {
             text-align: start;
         }
-
     }
 
     @include res(xl, min) {
-
         .col-left {
             margin-right: -30px;
         }
@@ -1416,6 +1421,12 @@
         width: 100%;
         margin-left: auto;
         margin-right: auto;
+        .box-btn {
+            margin-top: 48px;
+            @include res(xl) {
+                margin-top: 30px;
+            }
+        }
     }
 
     .banner-img {
