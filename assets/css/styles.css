@@ -7190,6 +7190,9 @@ input[type=number]::-webkit-outer-spin-button {
   top: 50%;
   transform: translateY(-50%);
 }
+.form-search-nav .btn-action .icon {
+  color: var(--text);
+}
 .form-search-nav fieldset input {
   padding-left: 44px;
   padding-top: 11px;
