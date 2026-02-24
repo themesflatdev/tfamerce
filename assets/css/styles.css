@@ -2549,14 +2549,14 @@ header.header-sticky.tf-header-landing {
     position: relative;
     z-index: 1;
   }
-  .header-s8 .header-inner .header-left,
-  .header-s8 .header-inner .header-right {
-    flex: unset;
-  }
   .header-s8 .header-inner {
     align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
+  }
+  .header-s8 .header-inner .header-left,
+  .header-s8 .header-inner .header-right {
+    flex: unset;
   }
 }
 @media (min-width: 1440px) {
@@ -3140,11 +3140,11 @@ header.header-sticky.tf-header-landing {
   padding: 6px 0 7px;
 }
 
-.nav-ul-mb .nav-mb-item:not(:last-child) .mb-menu-link {
-  padding-bottom: 12px;
-}
 .nav-ul-mb .nav-mb-item:not(:last-child) {
   border-bottom: 1px solid var(--line);
+}
+.nav-ul-mb .nav-mb-item:not(:last-child) .mb-menu-link {
+  padding-bottom: 12px;
 }
 .nav-ul-mb .nav-mb-item:not(:first-child) .mb-menu-link {
   padding-top: 12px;
@@ -11178,10 +11178,6 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 @media (min-width: 1200px) {
-  .filter-drawer-wrap.canvas-filter {
-    max-width: 100% !important;
-    width: 100% !important;
-  }
   .filter-drawer-wrap {
     position: absolute;
     z-index: 90;
@@ -11193,6 +11189,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     visibility: hidden;
     box-shadow: 0 0 25px 3px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
+  }
+  .filter-drawer-wrap.canvas-filter {
+    max-width: 100% !important;
+    width: 100% !important;
   }
   .filter-drawer-wrap .tf-group-filter {
     display: flex;
@@ -13919,13 +13919,13 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   max-width: 220px;
   width: 100%;
 }
-.box-order-summary .ship-item:not(:last-child) {
-  margin-bottom: 8px;
-}
 .box-order-summary .ship-item {
   display: flex;
   align-items: center;
   gap: 8px;
+}
+.box-order-summary .ship-item:not(:last-child) {
+  margin-bottom: 8px;
 }
 .box-order-summary .ship-item label {
   display: flex;
@@ -14341,12 +14341,12 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .tf-table-compare tr th:nth-child(2) {
   border-top-left-radius: 8px;
 }
-.tf-table-compare tr td:last-child {
-  border-right: 1px solid var(--line);
-}
 .tf-table-compare tr td {
   border-left: 1px solid var(--line);
   border-top: 1px solid var(--line);
+}
+.tf-table-compare tr td:last-child {
+  border-right: 1px solid var(--line);
 }
 .tf-table-compare tr:first-child td:first-child {
   border-top-left-radius: 8px;
@@ -17263,11 +17263,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
 }
 
-.invoice-table thead {
-  background-color: var(--bg-2);
-}
 .invoice-table {
   color: var(--black);
+}
+.invoice-table thead {
+  background-color: var(--bg-2);
 }
 .invoice-table th {
   font-weight: 600;
@@ -22219,19 +22219,40 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 .form-get_email {
-  backdrop-filter: blur(4px);
   border-width: 1px;
   border-style: solid;
-  background: var(--white-10);
-  border: 1px solid var(--white-10);
+  background: transparent;
+  border: 0px solid var(--white-10);
   border-image: initial;
-  padding: 12px;
-  border-radius: 999px;
+  padding: 0px;
   width: 100%;
+  position: relative;
 }
 @media (max-width: 575px) {
   .form-get_email {
     border-radius: 10px;
+  }
+}
+.form-get_email .fiedset-button_submit {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  bottom: 8px;
+}
+.form-get_email .tf-btn {
+  padding-left: 32px;
+  padding-right: 32px;
+  background-color: var(--white);
+  color: var(--text);
+}
+.form-get_email .tf-btn:hover {
+  background-color: var(--text);
+  color: var(--white);
+}
+@media (max-width: 575px) {
+  .form-get_email .tf-btn {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 
@@ -22240,18 +22261,13 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   height: unset;
   font-weight: 400;
   font-size: 16px;
-  line-height: 24px;
   background: var(--white-10);
-  border: 1px solid var(--white-10) !important;
+  border: 1px solid transparent !important;
   border-image: initial;
   border-radius: 999px;
-  padding: 15px 30px !important;
+  padding: 15px 23px !important;
+  padding-right: 145px !important;
   width: 100%;
-}
-@media (max-width: 1199px) {
-  .form-get_email .ip input {
-    padding: 9px 20px !important;
-  }
 }
 
 .form-get_email .ip input::placeholder {
