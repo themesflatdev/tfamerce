@@ -20943,6 +20943,12 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   padding-top: 26px;
   padding-bottom: 26px;
 }
+@media (max-width: 767px) {
+  .header-landing_inner .logo {
+    width: 130px;
+  }
+}
+
 .body-item {
   position: absolute;
   width: 480px;

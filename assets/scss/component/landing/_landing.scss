@@ -58,6 +58,11 @@
         //     flex: 1;
         // }
     }
+    @include res(md){
+        .logo{
+            width: 130px;
+        }
+    }
 }
 
 .body-item {
