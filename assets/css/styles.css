@@ -13191,6 +13191,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .product-style_list .card-product_wrapper {
   max-width: 330px;
+  width: 100%;
 }
 .product-style_list .card-product_info {
   position: relative;
