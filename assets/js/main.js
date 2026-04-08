@@ -378,7 +378,7 @@
         let navbarHeight = $("header").outerHeight();
         let didScroll = false;
 
-        $(window).on("scroll",function () {
+        $(window).on("scroll", function () {
             didScroll = true;
         });
 
@@ -1421,7 +1421,7 @@
 
         checkCounters();
 
-        $(window).on("scroll",checkCounters);
+        $(window).on("scroll", checkCounters);
     };
 
     /* Update Bundle Total 
@@ -1453,22 +1453,35 @@
     /* Filter Isotope
     -------------------------------------------------------------------------------------*/
     var filterIsotope = function () {
-        if ($().isotope) {
-            var $container = $('.demo-filter');
+        if (!$().isotope) return;
+
+        $(".main-filter-isotope").each(function () {
+            var $wrapper = $(this);
+            var $container = $wrapper.find(".demo-filter");
+            var $filterButtons = $wrapper.find(".posttype-filter a");
+
+            if (!$container.length) return;
+
             $container.imagesLoaded(function () {
                 $container.isotope({
-                    itemSelector: '.item',
-                    transitionDuration: '1s'
+                    itemSelector: ".item",
+                    transitionDuration: "1s"
                 });
             });
-            $(".posttype-filter a").on("click", function () {
+
+            $filterButtons.on("click", function (e) {
+                e.preventDefault();
+
                 var selector = $(this).attr("data-filter");
-                $(".posttype-filter a").removeClass("active");
+
+                $filterButtons.removeClass("active");
                 $(this).addClass("active");
-                $container.isotope({ filter: selector });
-                return false;
+
+                $container.isotope({
+                    filter: selector
+                });
             });
-        };
+        });
     };
 
     /* Reveal

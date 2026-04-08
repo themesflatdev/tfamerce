@@ -1,4 +1,4 @@
-@use "../../abstracts/index" as *;
+@use "../../abstracts/index"as *;
 
 .body-landing {
     background: #0e0c0b;
@@ -58,8 +58,9 @@
         //     flex: 1;
         // }
     }
-    @include res(md){
-        .logo{
+
+    @include res(md) {
+        .logo {
             width: 130px;
         }
     }
@@ -332,8 +333,7 @@
     }
 }
 
-.counter-potent {
-}
+.counter-potent {}
 
 .land-heading {
     display: flex;
@@ -688,8 +688,7 @@
         }
     }
 
-    @include res(xl, min) {
-    }
+    @include res(xl, min) {}
 
     @include res(lg) {
         .demo_tag {
@@ -730,7 +729,7 @@
         margin-left: -10px !important;
         margin-right: -10px !important;
 
-        > * {
+        >* {
             padding-left: 10px !important;
             padding-right: 10px !important;
         }
@@ -804,6 +803,7 @@
     }
 
     @include res(xxl) {
+
         &::after,
         &::before {
             width: 10%;
@@ -840,32 +840,28 @@
     .col-right {
         display: flex;
         gap: 16px;
-        -webkit-mask-image: linear-gradient(
-            180deg,
-            rgba(16, 16, 16, 0) 0%,
-            rgba(16, 16, 16, 0.1) 4.85%,
-            rgba(16, 16, 16, 0.8) 9.81%,
-            #101010 49.61%,
-            rgba(16, 16, 16, 0.8) 90.18%,
-            rgba(16, 16, 16, 0.1) 94.91%,
-            rgba(16, 16, 16, 0) 100%
-        );
+        -webkit-mask-image: linear-gradient(180deg,
+                rgba(16, 16, 16, 0) 0%,
+                rgba(16, 16, 16, 0.1) 4.85%,
+                rgba(16, 16, 16, 0.8) 9.81%,
+                #101010 49.61%,
+                rgba(16, 16, 16, 0.8) 90.18%,
+                rgba(16, 16, 16, 0.1) 94.91%,
+                rgba(16, 16, 16, 0) 100%);
         -webkit-mask-mode: alpha;
         -webkit-mask-repeat: no-repeat;
-        mask-image: linear-gradient(
-            180deg,
-            rgba(16, 16, 16, 0) 0%,
-            rgba(16, 16, 16, 0.1) 4.85%,
-            rgba(16, 16, 16, 0.8) 9.81%,
-            #101010 49.61%,
-            rgba(16, 16, 16, 0.8) 90.18%,
-            rgba(16, 16, 16, 0.1) 94.91%,
-            rgba(16, 16, 16, 0) 100%
-        );
+        mask-image: linear-gradient(180deg,
+                rgba(16, 16, 16, 0) 0%,
+                rgba(16, 16, 16, 0.1) 4.85%,
+                rgba(16, 16, 16, 0.8) 9.81%,
+                #101010 49.61%,
+                rgba(16, 16, 16, 0.8) 90.18%,
+                rgba(16, 16, 16, 0.1) 94.91%,
+                rgba(16, 16, 16, 0) 100%);
         mask-mode: alpha;
         mask-repeat: no-repeat;
 
-        > * {
+        >* {
             width: 50%;
         }
     }
@@ -1083,32 +1079,28 @@
     .col-right {
         display: flex;
         gap: 16px;
-        -webkit-mask-image: linear-gradient(
-            180deg,
-            rgba(16, 16, 16, 0) 0%,
-            rgba(16, 16, 16, 0.1) 4.85%,
-            rgba(16, 16, 16, 0.8) 9.81%,
-            #101010 49.61%,
-            rgba(16, 16, 16, 0.8) 90.18%,
-            rgba(16, 16, 16, 0.1) 94.91%,
-            rgba(16, 16, 16, 0) 100%
-        );
+        -webkit-mask-image: linear-gradient(180deg,
+                rgba(16, 16, 16, 0) 0%,
+                rgba(16, 16, 16, 0.1) 4.85%,
+                rgba(16, 16, 16, 0.8) 9.81%,
+                #101010 49.61%,
+                rgba(16, 16, 16, 0.8) 90.18%,
+                rgba(16, 16, 16, 0.1) 94.91%,
+                rgba(16, 16, 16, 0) 100%);
         -webkit-mask-mode: alpha;
         -webkit-mask-repeat: no-repeat;
-        mask-image: linear-gradient(
-            180deg,
-            rgba(16, 16, 16, 0) 0%,
-            rgba(16, 16, 16, 0.1) 4.85%,
-            rgba(16, 16, 16, 0.8) 9.81%,
-            #101010 49.61%,
-            rgba(16, 16, 16, 0.8) 90.18%,
-            rgba(16, 16, 16, 0.1) 94.91%,
-            rgba(16, 16, 16, 0) 100%
-        );
+        mask-image: linear-gradient(180deg,
+                rgba(16, 16, 16, 0) 0%,
+                rgba(16, 16, 16, 0.1) 4.85%,
+                rgba(16, 16, 16, 0.8) 9.81%,
+                #101010 49.61%,
+                rgba(16, 16, 16, 0.8) 90.18%,
+                rgba(16, 16, 16, 0.1) 94.91%,
+                rgba(16, 16, 16, 0) 100%);
         mask-mode: alpha;
         mask-repeat: no-repeat;
 
-        > * {
+        >* {
             width: 50%;
         }
     }
@@ -1145,6 +1137,7 @@
 
 .tf-landing-footer {
     .col-left {
+
         .logo-site,
         .s-title {
             margin-bottom: 32px;
@@ -1157,6 +1150,7 @@
 
     @include res(xl) {
         .col-left {
+
             .logo-site,
             .s-title {
                 margin-bottom: 24px;
@@ -1287,8 +1281,7 @@
         }
     }
 
-    @include res(xl) {
-    }
+    @include res(xl) {}
 
     @include res(xl) {
         height: 100%;
@@ -1334,13 +1327,14 @@
 }
 
 .feature-grid_wrap {
+
     // display: flex;
     // gap: 20px;
     @include res(lg) {
         display: flex;
         flex-direction: column;
 
-        > * {
+        >* {
             height: 100%;
         }
     }
@@ -1401,6 +1395,7 @@
         display: flex;
         overflow: hidden;
         right: 0;
+        pointer-events: none;
     }
 }
 
@@ -1426,8 +1421,10 @@
         width: 100%;
         margin-left: auto;
         margin-right: auto;
+
         .box-btn {
             margin-top: 48px;
+
             @include res(xl) {
                 margin-top: 30px;
             }
@@ -1582,24 +1579,29 @@
     padding: 0px;
     width: 100%;
     position: relative;
+
     @include res(sm) {
         border-radius: 10px;
     }
+
     .fiedset-button_submit {
         position: absolute;
         top: 8px;
         right: 8px;
         bottom: 8px;
     }
+
     .tf-btn {
         padding-left: 32px;
         padding-right: 32px;
         background-color: var(--white);
         color: var(--text);
+
         &:hover {
             background-color: var(--text);
             color: var(--white);
         }
+
         @include res(sm) {
             padding-left: 24px;
             padding-right: 24px;
@@ -1665,4 +1667,74 @@
 
 .entry__error {
     padding-left: 15px;
+}
+
+
+
+.menu-tab-line {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    border-radius: 15px;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 58px;
+    overflow: auto;
+
+    li {
+        display: flex;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        min-width: 190px;
+        padding: 14px 16px;
+        border: 1px solid #EBEBEB;
+        border-radius: 11px;
+        overflow: hidden;
+        position: relative;
+
+        .tab-link_text {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            font-weight: 500;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            background: linear-gradient(97.32deg, #866FE3, #4A885C, #866FE3);
+            background-size: 200% 100%;
+            animation: gradientFlow 2s linear infinite;
+            z-index: 0;
+            @include transition3;
+            @include hidden;
+        }
+
+        &.active {
+            color: var(--white);
+
+            &::after {
+                box-shadow: 2px 2px 8px 0px #00000040 inset;
+                @include visible;
+            }
+        }
+    }
+
+    @include res(md) {
+        margin-bottom: 30px;
+
+        a {
+            padding: 10px;
+            min-width: 150px;
+        }
+    }
 }
