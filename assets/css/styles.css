@@ -21519,6 +21519,9 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   visibility: hidden;
   transform: translateY(10px);
 }
+.card-demo .demo-image .group-action .tf-btn {
+  width: 100%;
+}
 .card-demo .demo-image::after {
   height: 0%;
   opacity: 0;
@@ -21537,6 +21540,12 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   height: 70%;
   opacity: 1;
   visibility: visible;
+}
+@media (min-width: 768px) {
+  .card-demo .demo-image .group-action {
+    margin: 0 auto;
+    width: 50%;
+  }
 }
 @media (max-width: 991px) {
   .card-demo .demo_tag {

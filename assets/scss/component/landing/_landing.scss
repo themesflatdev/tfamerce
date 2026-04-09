@@ -694,6 +694,10 @@
         .group-action {
             @include hidden;
             transform: translateY(10px);
+
+            .tf-btn {
+                width: 100%;
+            }
         }
 
         &::after {
@@ -720,7 +724,15 @@
         }
     }
 
-    @include res(xl, min) {}
+    @include res(md, min) {
+
+        .demo-image {
+            .group-action {
+                margin: 0 auto;
+                width: 50%;
+            }
+        }
+    }
 
     @include res(lg) {
         .demo_tag {
