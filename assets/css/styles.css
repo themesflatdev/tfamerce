@@ -21069,7 +21069,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(7, 7, 7, 0.5490196078);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 2;
 }
 .section-intro-landing .intro-image::after {
@@ -21282,12 +21282,13 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 24px 12px;
 }
-.choose-grid .grid-item .list-fe li {
+.choose-grid .grid-item .list-fe .item {
   width: calc(50% - 6px);
   display: grid;
   place-items: center;
+  color: var(--white);
 }
 .choose-grid .grid-item .list-fe .img {
   border-radius: 12px;

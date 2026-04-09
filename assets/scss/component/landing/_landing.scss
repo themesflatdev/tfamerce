@@ -198,7 +198,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: #0707078c;
+            background: rgba(0, 0, 0, 0.8);
             z-index: 2;
         }
 
@@ -445,12 +445,13 @@
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 12px;
+            gap: 24px 12px;
 
-            li {
+            .item {
                 width: calc(50% - 6px);
                 display: grid;
                 place-items: center;
+                color: var(--white);
             }
 
             .img {
