@@ -21064,6 +21064,8 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
+  left: 15px;
+  right: 15px;
 }
 .section-intro-landing .intro-image::before {
   content: "";
