@@ -12583,6 +12583,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   .product-style_mini_list-v2 .card-product_wrapper {
     max-width: 160px;
     flex-shrink: 0;
+    display: flex;
+  }
+  .product-style_mini_list .card-product_wrapper .product-img,
+  .product-style_mini_list-v2 .card-product_wrapper .product-img {
+    display: flex;
   }
 }
 @media (min-width: 1200px) {

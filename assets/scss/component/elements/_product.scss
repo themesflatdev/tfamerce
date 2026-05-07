@@ -1426,6 +1426,11 @@
         .card-product_wrapper {
             max-width: 160px;
             flex-shrink: 0;
+            display: flex;
+
+            .product-img {
+                display: flex;
+            }
         }
     }
 
