@@ -1231,7 +1231,18 @@
         }
     }
 
-    @include res(lg) {
+    @include res(xl) {
+        .col-left {
+            height: 100%;
+
+            .sw-thumb,
+            .sw-image {
+                height: 100%;
+            }
+        }
+    }
+
+    @include res(md) {
         .sw-thumb {
             img {
                 max-height: 400px;
@@ -1380,6 +1391,15 @@
         .tf-product-media-main {
             .tf-image-zoom {
                 aspect-ratio: calc(565 / 753);
+
+                @include res(md) {
+                    aspect-ratio: 1.2;
+                    max-height: unset;
+                }
+
+                @include res(sm) {
+                    aspect-ratio: 1;
+                }
             }
         }
     }

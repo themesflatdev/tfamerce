@@ -1709,6 +1709,9 @@ h6,
   .d-xxxl-flex {
     display: none !important;
   }
+  .d-xxxl-block {
+    display: block !important;
+  }
 }
 @media (max-width: 1599px) {
   .xxxl-d-none {
@@ -1726,6 +1729,9 @@ h6,
   }
   .xl-gap-20 {
     gap: 20px !important;
+  }
+  .xl-d-none {
+    display: none;
   }
 }
 @media (max-width: 991px) {
@@ -18514,7 +18520,16 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     display: none !important;
   }
 }
-@media (max-width: 991px) {
+@media (max-width: 1199px) {
+  .section-testimonial-thumbs .col-left {
+    height: 100%;
+  }
+  .section-testimonial-thumbs .col-left .sw-thumb,
+  .section-testimonial-thumbs .col-left .sw-image {
+    height: 100%;
+  }
+}
+@media (max-width: 767px) {
   .section-testimonial-thumbs .sw-thumb img {
     max-height: 400px;
   }
@@ -18633,6 +18648,17 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .banner-product-single.style-2 .tf-product-media-main .tf-image-zoom {
   aspect-ratio: 0.7503320053;
+}
+@media (max-width: 767px) {
+  .banner-product-single.style-2 .tf-product-media-main .tf-image-zoom {
+    aspect-ratio: 1.2;
+    max-height: unset;
+  }
+}
+@media (max-width: 575px) {
+  .banner-product-single.style-2 .tf-product-media-main .tf-image-zoom {
+    aspect-ratio: 1;
+  }
 }
 .banner-product-single.style-3 .product-thumbs-slider {
   gap: 10px;
@@ -20542,7 +20568,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 8px;
+  gap: 12px 8px;
   flex-wrap: wrap;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -20735,6 +20761,15 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     max-width: 420px;
   }
 }
+@media (min-width: 576px) and (max-width: 1199px) {
+  .footer-s2 .footer-inner .col-left {
+    display: flex;
+    gap: 20px;
+  }
+  .footer-s2 .footer-inner .col-left > * {
+    width: 50%;
+  }
+}
 @media (max-width: 1199px) {
   .footer-s2 .footer-inner {
     flex-direction: column;
@@ -20748,6 +20783,9 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   }
   .footer-s2 .footer-inner .col-right > * {
     width: 100%;
+  }
+  .footer-s2 .footer-wrap-3 {
+    max-width: 100%;
   }
 }
 @media (max-width: 575px) {

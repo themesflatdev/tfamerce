@@ -796,6 +796,10 @@
     .d-xxxl-flex {
         display: none !important;
     }
+
+    .d-xxxl-block {
+        display: block !important;
+    }
 }
 
 @include res(xxxl) {
@@ -818,6 +822,10 @@
 
     .xl-gap-20 {
         gap: 20px !important;
+    }
+
+    .xl-d-none {
+        display: none;
     }
 }
 
