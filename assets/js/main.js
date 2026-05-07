@@ -1488,14 +1488,6 @@
     -------------------------------------------------------------------------*/
     const reveal = () => {
         const $reveals = $(".reveal");
-
-        if ($reveals.length === 0) {
-            console.log("Reveal is not working because no items found.");
-            return;
-        } else {
-            console.log("Reveal is working");
-        }
-
         if ($(window).width() > 768) {
             $(window).on("scroll", function () {
                 $reveals.each(function () {
