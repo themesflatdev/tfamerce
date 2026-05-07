@@ -1666,6 +1666,9 @@ h6,
   .w-md-auto {
     width: auto !important;
   }
+  .aspect-ratio-md-1 {
+    aspect-ratio: 1 !important;
+  }
 }
 @media (min-width: 992px) {
   .gap-lg-30 {
@@ -16080,6 +16083,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   inset: 0;
   background: linear-gradient(180.52deg, rgba(91, 19, 72, 0) 51.85%, #5b1348 122.82%);
   z-index: 1;
+}
+@media (max-width: 991px) {
+  .banner-image-text.style-11::before {
+    background: linear-gradient(180.52deg, rgba(91, 19, 72, 0) 20%, #5b1348 122.82%);
+  }
 }
 .banner-image-text.style-11 .bn-image {
   border-radius: 0;

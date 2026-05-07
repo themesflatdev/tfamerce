@@ -1102,6 +1102,12 @@
                         rgba(91, 19, 72, 0) 51.85%,
                         #5b1348 122.82%);
                 z-index: 1;
+
+                @include res(lg) {
+                    background: linear-gradient(180.52deg,
+                            rgba(91, 19, 72, 0) 20%,
+                            #5b1348 122.82%);
+                }
             }
 
             .bn-image {

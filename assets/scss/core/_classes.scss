@@ -741,6 +741,11 @@
     .w-md-auto {
         width: auto !important;
     }
+
+    .aspect-ratio-md-1 {
+        aspect-ratio: 1 !important;
+    }
+
 }
 
 @include res(lg, min) {
