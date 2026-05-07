@@ -1554,6 +1554,12 @@
                 padding: 12px 19px;
             }
         }
+
+        @include res(lg) {
+            .product-thumbs-slider .tf-product-media-main .item {
+                aspect-ratio: 1.1;
+            }
+        }
     }
 
     &.style-6 {

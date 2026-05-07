@@ -18786,6 +18786,11 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
     padding: 12px 19px;
   }
 }
+@media (max-width: 991px) {
+  .banner-product-single.style-5 .product-thumbs-slider .tf-product-media-main .item {
+    aspect-ratio: 1.1;
+  }
+}
 .banner-product-single.style-6 {
   background-color: var(--bg);
 }
