@@ -8982,6 +8982,10 @@ button.animate-btn::after,
   }
 }
 
+.swiper-2row .list-2row > *:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 /* ---------------------------------------------------------
     * Name: Amerce - Multipurpose eCommerce HTML Template
     * Version: 1.0.1

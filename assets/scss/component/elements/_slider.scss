@@ -1091,3 +1091,14 @@
         }
     }
 }
+
+
+.swiper-2row {
+    .list-2row {
+        >* {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
