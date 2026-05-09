@@ -1084,7 +1084,7 @@
             justify-content: space-between;
         }
 
-        .size-btn:not(.select-item) {
+        .size-btn:not(.select-item, .style-radio) {
             width: 44px;
             height: 44px;
             @include flex(center, center);
@@ -1106,6 +1106,53 @@
             &.disabled {
                 opacity: 0.3;
                 pointer-events: none;
+            }
+        }
+
+        .size-btn {
+            &.style-radio {
+                display: flex;
+                align-items: center;
+                gap: 2px;
+                cursor: pointer;
+
+                &.disabled {
+                    opacity: 0.3;
+                    pointer-events: none;
+                }
+
+                .check-rounded {
+                    position: relative;
+                    border: 1px solid #9a9a9a;
+                    border-radius: 50%;
+                    background: none;
+                    cursor: pointer;
+                    height: 14px;
+                    width: 14px;
+                    @include flex(center, center);
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        border-radius: 50%;
+                        width: 8px;
+                        height: 8px;
+                        background-color: var(--text);
+                        opacity: 0;
+                        z-index: 1;
+                        @include transition3;
+                    }
+                }
+
+                &.active {
+                    .check-rounded {
+                        border-color: var(--text);
+
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
+                }
             }
         }
     }
@@ -2203,5 +2250,115 @@
         right: 20px;
         left: auto;
         z-index: 21;
+    }
+}
+
+.widget-featured-products {
+    display: grid;
+    gap: 15px;
+
+    .featured-product-item {
+        display: flex;
+        gap: 15px;
+
+        .card-product-wrapper {
+            width: 92px;
+            min-width: 92px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .card-product-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .title {
+                font-size: 16px;
+                line-height: 19.2px;
+                margin-bottom: 1px;
+            }
+
+            .price {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 14px;
+            }
+        }
+    }
+}
+
+.widget-iconbox-list {
+    display: grid;
+    gap: 18px;
+
+    .iconbox-item {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        .box-icon {
+            border: 1px solid var(--line);
+        }
+
+        .iconbox-content {
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+
+            .iconbox-title {
+                font-size: 16px;
+                line-height: 19.2px;
+                font-weight: 600;
+            }
+
+            .iconbox-desc {
+                color: var(--text-3);
+            }
+        }
+    }
+}
+
+.widget-price {
+    margin-top: 24px;
+    margin-bottom: 35px;
+
+    .box-title-price {
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .caption-price {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .price-val {
+            width: 68px;
+            display: flex;
+            justify-content: flex-end;
+            position: relative;
+            padding: 8px 10px;
+            border: 1px solid var(--line);
+            border-radius: 5px;
+
+            &::after {
+                content: attr(data-currency);
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                left: 10px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+    }
+
+    .price-val-range {
+        padding: 0px 10px;
     }
 }

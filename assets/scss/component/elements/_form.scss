@@ -176,6 +176,16 @@ input[type=number]::-webkit-outer-spin-button {
             height: 16px;
         }
     }
+
+    &.style-small {
+        width: 12px;
+        height: 12px;
+
+        &::before {
+            width: 6px;
+            height: 6px;
+        }
+    }
 }
 
 .checkbox-wrap {

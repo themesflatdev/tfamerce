@@ -1,123 +1,239 @@
 // swiper product details
+// swiper product details
 if ($(".product-thumbs-slider").length > 0) {
-    var direction = $(".tf-product-media-thumbs").data("direction") ?? "horizontal";
-    var preview = $(".tf-product-media-thumbs").data("preview");
-    var xl_preview = $(".tf-product-media-thumbs").data("xl-preview") ?? preview;
-    var space = $(".tf-product-media-thumbs").data("space") || 8;
 
-    var thumbs = new Swiper(".tf-product-media-thumbs", {
-        spaceBetween: space,
-        slidesPerView: preview,
-        freeMode: true,
-        watchSlidesProgress: true,
-        observer: true,
-        observeParents: true,
+    $(".product-thumbs-slider").each(function () {
 
-        breakpoints: {
-            0: {
-                direction: "horizontal",
-                slidesPerView: 4,
+        const $wrap = $(this);
+
+        // chỉ filter khi section có class này
+        const enableColorFilter =
+            $wrap.closest(".section-product-single")
+                .hasClass("enable-filter-color-slider");
+
+        const $mainEl = $wrap.find(".tf-product-media-main");
+        const $thumbEl = $wrap.find(".tf-product-media-thumbs");
+        const $section = $wrap.closest(".section-product-single");
+
+        var direction = $thumbEl.data("direction") ?? "horizontal";
+        var preview = $thumbEl.data("preview");
+        var xl_preview = $thumbEl.data("xl-preview") ?? preview;
+        var space = $thumbEl.data("space") || 8;
+
+        // lưu slide gốc
+        const allMainSlides = $mainEl.find(".swiper-slide").clone();
+        const allThumbSlides = $thumbEl.find(".swiper-slide").clone();
+
+        // thumbs swiper
+        var thumbs = new Swiper($thumbEl[0], {
+            spaceBetween: space,
+            slidesPerView: preview,
+            freeMode: true,
+            watchSlidesProgress: true,
+            observer: true,
+            observeParents: true,
+
+            breakpoints: {
+                0: {
+                    direction: "horizontal",
+                    slidesPerView: 4,
+                },
+                575: {
+                    direction: "horizontal",
+                    slidesPerView: 5,
+                },
+                1200: {
+                    direction: direction,
+                    slidesPerView: xl_preview,
+                },
             },
-            575: {
-                direction: "horizontal",
-                slidesPerView: 5,
-            },
-            1200: {
-                direction: direction,
-                slidesPerView: xl_preview,
-            },
-        },
-    });
-
-    var main = new Swiper(".tf-product-media-main", {
-        spaceBetween: 5,
-        observer: true,
-        observeParents: true,
-        speed: 800,
-        navigation: {
-            nextEl: ".thumbs-next",
-            prevEl: ".thumbs-prev",
-        },
-        thumbs: {
-            swiper: thumbs,
-        },
-    });
-
-    const modelViewer = document.querySelector(".slide-3d");
-    if (modelViewer) {
-        modelViewer.addEventListener("mouseenter", () => {
-            main.allowTouchMove = false;
         });
 
-        modelViewer.addEventListener("mouseleave", () => {
-            main.allowTouchMove = true;
-        });
-    }
+        // main swiper
+        var main = new Swiper($mainEl[0], {
+            spaceBetween: 5,
+            observer: true,
+            observeParents: true,
+            speed: 800,
 
-    function updateActiveButtonThumbs(type, activeIndex) {
-        var btnClass = `.${type}-btn`;
-        var dataAttr = `data-${type}`;
-        var currentClass = `.tf-product-info-list .value-current${capitalizeFirstLetter(type)}`;
-        var selectClass = `.tf-product-info-list .select-current${capitalizeFirstLetter(type)}`;
-        $(btnClass).removeClass("active");
+            navigation: {
+                nextEl: $wrap.find(".thumbs-next")[0],
+                prevEl: $wrap.find(".thumbs-prev")[0],
+            },
 
-        var currentSlide = $(".tf-product-media-main .swiper-slide").eq(activeIndex);
-        var currentValue = currentSlide.attr(dataAttr);
-
-        if (currentValue) {
-            $(`${btnClass}[${dataAttr}='${currentValue}']`).addClass("active");
-            $(currentClass).text(currentValue);
-            $(selectClass).text(currentValue);
-        }
-    }
-
-    function scrollToThumbs(type, value, color) {
-        if (!value || !color) return;
-
-        var matchingSlides = $(".tf-product-media-main .swiper-slide").filter(function () {
-            return $(this).attr(`data-${type}`) === value && $(this).attr("data-color") === color;
+            thumbs: {
+                swiper: thumbs,
+            },
         });
 
-        if (matchingSlides.length > 0) {
-            var firstIndex = matchingSlides.first().index();
-            main.slideTo(firstIndex, 1000, false);
-            thumbs.slideTo(firstIndex, 1000, false);
-        } else {
-            var fallbackSlides = $(".tf-product-media-main .swiper-slide").filter(function () {
-                return $(this).attr(`data-${type}`) === value;
+        // =========================
+        // FILTER COLOR
+        // =========================
+
+        function filterSlidesByColor(color) {
+
+            if (!enableColorFilter) return;
+
+            main.removeAllSlides();
+            thumbs.removeAllSlides();
+
+            let mainSlides = [];
+            let thumbSlides = [];
+
+            allMainSlides.each(function (i) {
+
+                const slideColor = $(this).data("color");
+
+                if (slideColor === color) {
+
+                    mainSlides.push($(this)[0].outerHTML);
+
+                    if (allThumbSlides.eq(i).length) {
+                        thumbSlides.push(allThumbSlides.eq(i)[0].outerHTML);
+                    }
+                }
             });
 
-            if (fallbackSlides.length > 0) {
-                var fallbackIndex = fallbackSlides.first().index();
-                main.slideTo(fallbackIndex, 1000, false);
-                thumbs.slideTo(fallbackIndex, 1000, false);
+            main.appendSlide(mainSlides);
+            thumbs.appendSlide(thumbSlides);
+
+            main.update();
+            thumbs.update();
+
+            main.slideTo(0, 0);
+        }
+
+        // =========================
+        // HELPERS
+        // =========================
+
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        function updateActiveButtonThumbs(type, activeIndex) {
+
+            var btnClass = `.${type}-btn`;
+            var dataAttr = `data-${type}`;
+
+            var currentClass =
+                `.tf-product-info-list .value-current${capitalizeFirstLetter(type)}`;
+
+            var selectClass =
+                `.tf-product-info-list .select-current${capitalizeFirstLetter(type)}`;
+
+            $section.find(btnClass).removeClass("active");
+
+            var currentSlide = $mainEl.find(".swiper-slide").eq(activeIndex);
+
+            var currentValue = currentSlide.attr(dataAttr);
+
+            if (currentValue) {
+
+                $section.find(`${btnClass}[${dataAttr}='${currentValue}']`)
+                    .addClass("active");
+
+                $section.find(currentClass).text(currentValue);
+
+                $section.find(selectClass).text(currentValue);
             }
         }
-    }
 
-    function setupVariantButtonsThumbs(type) {
-        $(`.${type}-btn`).on("click", function () {
-            if ($(this).closest(".modal-quick-view").length) return;
-            var value = $(this).data(type);
-            var color = $(".tf-product-info-list .value-currentColor").text();
+        function scrollToThumbs(type, value, color) {
 
-            $(`.${type}-btn`).removeClass("active");
-            $(this).addClass("active");
+            if (!value || !color) return;
 
-            scrollToThumbs(type, value, color);
+            var matchingSlides = $mainEl.find(".swiper-slide").filter(function () {
+
+                return (
+                    $(this).attr(`data-${type}`) === value &&
+                    $(this).attr("data-color") === color
+                );
+            });
+
+            if (matchingSlides.length > 0) {
+
+                var firstIndex = matchingSlides.first().index();
+
+                main.slideTo(firstIndex, 1000, false);
+
+                thumbs.slideTo(firstIndex, 1000, false);
+            }
+        }
+
+        // =========================
+        // BUTTON EVENTS
+        // =========================
+
+        function setupVariantButtonsThumbs(type) {
+
+            $section.find(`.${type}-btn`).on("click", function () {
+
+                if ($(this).closest(".modal-quick-view").length) return;
+
+                var value = $(this).data(type);
+
+                // =====================
+                // COLOR
+                // =====================
+
+                if (type === "color") {
+
+                    $section.find(".color-btn").removeClass("active");
+
+                    $(this).addClass("active");
+
+                    $section.find(".value-currentColor").text(value);
+
+                    // mode filter
+                    if (enableColorFilter) {
+
+                        filterSlidesByColor(value);
+
+                    } else {
+
+                        // mode thường
+                        scrollToThumbs(type, value, value);
+                    }
+
+                    return;
+                }
+
+                // =====================
+                // SIZE
+                // =====================
+
+                var color =
+                    $section.find(".value-currentColor").text().trim();
+
+                $section.find(`.${type}-btn`).removeClass("active");
+
+                $(this).addClass("active");
+
+                scrollToThumbs(type, value, color);
+            });
+        }
+
+        ["color", "size"].forEach((type) => {
+
+            main.on("slideChange", function () {
+                updateActiveButtonThumbs(type, this.activeIndex);
+            });
+
+            setupVariantButtonsThumbs(type);
+
+            updateActiveButtonThumbs(type, main.activeIndex);
         });
-    }
+        // INIT FIRST ACTIVE COLOR
+        if (enableColorFilter) {
 
-    function capitalizeFirstLetter(string) {
-        return string.charAt(0).toUpperCase() + string.slice(1);
-    }
+            const firstActiveColor =
+                $section.find(".color-btn.active").data("color");
 
-    ["color", "size"].forEach((type) => {
-        main.on("slideChange", function () {
-            updateActiveButtonThumbs(type, this.activeIndex);
-        });
-        setupVariantButtonsThumbs(type);
-        updateActiveButtonThumbs(type, main.activeIndex);
+            if (firstActiveColor) {
+                filterSlidesByColor(firstActiveColor);
+            }
+        }
     });
 }
 
