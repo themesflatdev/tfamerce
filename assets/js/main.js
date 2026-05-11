@@ -1054,17 +1054,88 @@
 
 
             } else {
-                submenu.find(".sub-menu_list > li > a.sub-menu_link").each(function () {
-                    const $a = $(this);
+                submenu.find("> .sub-menu_list > li").each(function (j) {
+
+                    const $li = $(this);
+
+                    // ===== HAS SUB LV2 =====
+                    if ($li.hasClass("has-menu-lv2")) {
+
+                        const $heading = $li.find("> .menu-heading-lv2");
+                        const title = $heading
+                            .find(".cus-text")
+                            .text()
+                            .trim();
+
+                        const subId = `${id}-lv2-${j}`;
+
+                        const hasActiveChild =
+                            $li.find(".sub-menu-lv2 .sub-menu_link.active").length > 0;
+
+                        const activeClass = hasActiveChild ? "active" : "";
+
+                        const $group = $(`
+            <li>
+                <a href="#${subId}"
+                    class="collapsed sub-nav-link ${activeClass}"
+                    data-bs-toggle="collapse"
+                    aria-expanded="false"
+                    aria-controls="${subId}">
+                    
+                    <span>${title}</span>
+                    <span class="icon ${$iconArrow2}"></span>
+                </a>
+
+                <div id="${subId}" class="collapse">
+                    <ul class="sub-nav-menu sub-menu-level-2"></ul>
+                </div>
+            </li>
+        `);
+
+                        $li.find(".sub-menu-lv2 .sub-menu_link").each(function () {
+
+                            const $a = $(this);
+                            const href = $a.attr("href") || "#";
+                            const html = $a.html();
+                            const active = $a.hasClass("active") ? "active" : "";
+
+                            if (html && html.trim()) {
+                                $group
+                                    .find(".sub-menu-level-2")
+                                    .append(`
+                        <li>
+                            <a href="${href}" class="sub-nav-link ${active}">
+                                ${html}
+                            </a>
+                        </li>
+                    `);
+                            }
+                        });
+
+                        $subNav.append($group);
+
+                        return;
+                    }
+
+                    // ===== NORMAL ITEM =====
+                    const $a = $li.find("> a.sub-menu_link");
+
+                    if (!$a.length) return;
+
                     const href = $a.attr("href") || "#";
                     const html = $a.html();
-                    const isActive = $a.hasClass("active");
-                    const activeClass = isActive ? "active" : "";
-                    const isSoon = $a.hasClass("soon");
-                    const soonClass = isSoon ? "soon" : "";
+
+                    const activeClass = $a.hasClass("active") ? "active" : "";
+                    const soonClass = $a.hasClass("soon") ? "soon" : "";
 
                     if (html && html.trim()) {
-                        $subNav.append(`<li><a href="${href}" class="sub-nav-link ${activeClass} ${soonClass}">${html}</a></li>`);
+                        $subNav.append(`
+            <li>
+                <a href="${href}" class="sub-nav-link ${activeClass} ${soonClass}">
+                    ${html}
+                </a>
+            </li>
+        `);
                     }
                 });
             }
