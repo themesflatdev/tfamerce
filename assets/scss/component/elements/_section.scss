@@ -3688,3 +3688,15 @@
         }
     }
 }
+
+.section-product-description {
+    &.type-list {
+        .accordion-action {
+            border-color: var(--line);
+        }
+
+        .box-rating {
+            margin-bottom: 24px;
+        }
+    }
+}

@@ -125,11 +125,27 @@
         &::after {
             display: none;
         }
+    }
 
+    @include res(lg, min) {
+        &.style-vertical {
+            display: grid;
+
+            &::after {
+                display: none;
+            }
+
+            .tf-btn-tab {
+                &:not(.active) {
+                    border-color: var(--line);
+                }
+            }
+        }
     }
 
     @include res(xl, min) {
         gap: 32px;
+
     }
 }
 

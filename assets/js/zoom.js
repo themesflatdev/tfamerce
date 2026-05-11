@@ -1,173 +1,181 @@
 // swiper product details
-// swiper product details
 if ($(".product-thumbs-slider").length > 0) {
 
-    $(".product-thumbs-slider").each(function () {
+    const $wrap = $(".product-thumbs-slider");
 
-        const $wrap = $(this);
+    const enableColorFilter =
+        $wrap.closest(".section-product-single")
+            .hasClass("enable-filter-color-slider");
 
-        // chỉ filter khi section có class này
-        const enableColorFilter =
-            $wrap.closest(".section-product-single")
-                .hasClass("enable-filter-color-slider");
+    const $mainEl = $wrap.find(".tf-product-media-main");
+    const $thumbEl = $wrap.find(".tf-product-media-thumbs");
+    const $section = $wrap.closest(".section-product-single");
 
-        const $mainEl = $wrap.find(".tf-product-media-main");
-        const $thumbEl = $wrap.find(".tf-product-media-thumbs");
-        const $section = $wrap.closest(".section-product-single");
+    var direction = $thumbEl.data("direction") ?? "horizontal";
+    var preview = $thumbEl.data("preview");
+    var xl_preview = $thumbEl.data("xl-preview") ?? preview;
+    var space = $thumbEl.data("space") || 8;
 
-        var direction = $thumbEl.data("direction") ?? "horizontal";
-        var preview = $thumbEl.data("preview");
-        var xl_preview = $thumbEl.data("xl-preview") ?? preview;
-        var space = $thumbEl.data("space") || 8;
+    const allMainSlides = $mainEl.find(".swiper-slide").clone();
+    const allThumbSlides = $thumbEl.find(".swiper-slide").clone();
 
-        // lưu slide gốc
-        const allMainSlides = $mainEl.find(".swiper-slide").clone();
-        const allThumbSlides = $thumbEl.find(".swiper-slide").clone();
+    // =========================
+    // THUMBS
+    // =========================
 
-        // thumbs swiper
-        var thumbs = new Swiper($thumbEl[0], {
-            spaceBetween: space,
-            slidesPerView: preview,
-            freeMode: true,
-            watchSlidesProgress: true,
-            observer: true,
-            observeParents: true,
+    var thumbs = new Swiper($thumbEl[0], {
+        spaceBetween: space,
+        slidesPerView: preview,
+        freeMode: true,
+        watchSlidesProgress: true,
+        observer: true,
+        observeParents: true,
 
-            breakpoints: {
-                0: {
-                    direction: "horizontal",
-                    slidesPerView: 4,
-                },
-                575: {
-                    direction: "horizontal",
-                    slidesPerView: 5,
-                },
-                1200: {
-                    direction: direction,
-                    slidesPerView: xl_preview,
-                },
+        breakpoints: {
+            0: {
+                direction: "horizontal",
+                slidesPerView: 4,
             },
-        });
-
-        // main swiper
-        var main = new Swiper($mainEl[0], {
-            spaceBetween: 5,
-            observer: true,
-            observeParents: true,
-            speed: 800,
-
-            navigation: {
-                nextEl: $wrap.find(".thumbs-next")[0],
-                prevEl: $wrap.find(".thumbs-prev")[0],
+            575: {
+                direction: "horizontal",
+                slidesPerView: 5,
             },
-
-            thumbs: {
-                swiper: thumbs,
+            1200: {
+                direction: direction,
+                slidesPerView: xl_preview,
             },
-        });
+        },
+    });
 
-        // =========================
-        // FILTER COLOR
-        // =========================
+    // =========================
+    // MAIN
+    // =========================
 
-        function filterSlidesByColor(color) {
+    window.mainSwiper = new Swiper($mainEl[0], {
+        spaceBetween: 5,
+        observer: true,
+        observeParents: true,
+        speed: 800,
 
-            if (!enableColorFilter) return;
+        navigation: {
+            nextEl: $wrap.find(".thumbs-next")[0],
+            prevEl: $wrap.find(".thumbs-prev")[0],
+        },
 
-            main.removeAllSlides();
-            thumbs.removeAllSlides();
+        thumbs: {
+            swiper: thumbs,
+        },
+    });
 
-            let mainSlides = [];
-            let thumbSlides = [];
+    // =========================
+    // FILTER COLOR
+    // =========================
 
-            allMainSlides.each(function (i) {
+    function filterSlidesByColor(color) {
 
-                const slideColor = $(this).data("color");
+        if (!enableColorFilter) return;
 
-                if (slideColor === color) {
+        window.mainSwiper.removeAllSlides();
+        thumbs.removeAllSlides();
 
-                    mainSlides.push($(this)[0].outerHTML);
+        let mainSlides = [];
+        let thumbSlides = [];
 
-                    if (allThumbSlides.eq(i).length) {
-                        thumbSlides.push(allThumbSlides.eq(i)[0].outerHTML);
-                    }
+        allMainSlides.each(function (i) {
+
+            const slideColor = $(this).data("color");
+
+            if (slideColor === color) {
+
+                mainSlides.push($(this)[0].outerHTML);
+
+                if (allThumbSlides.eq(i).length) {
+                    thumbSlides.push(allThumbSlides.eq(i)[0].outerHTML);
                 }
-            });
-
-            main.appendSlide(mainSlides);
-            thumbs.appendSlide(thumbSlides);
-
-            main.update();
-            thumbs.update();
-
-            main.slideTo(0, 0);
-        }
-
-        // =========================
-        // HELPERS
-        // =========================
-
-        function capitalizeFirstLetter(string) {
-            return string.charAt(0).toUpperCase() + string.slice(1);
-        }
-
-        function updateActiveButtonThumbs(type, activeIndex) {
-
-            var btnClass = `.${type}-btn`;
-            var dataAttr = `data-${type}`;
-
-            var currentClass =
-                `.tf-product-info-list .value-current${capitalizeFirstLetter(type)}`;
-
-            var selectClass =
-                `.tf-product-info-list .select-current${capitalizeFirstLetter(type)}`;
-
-            $section.find(btnClass).removeClass("active");
-
-            var currentSlide = $mainEl.find(".swiper-slide").eq(activeIndex);
-
-            var currentValue = currentSlide.attr(dataAttr);
-
-            if (currentValue) {
-
-                $section.find(`${btnClass}[${dataAttr}='${currentValue}']`)
-                    .addClass("active");
-
-                $section.find(currentClass).text(currentValue);
-
-                $section.find(selectClass).text(currentValue);
             }
+        });
+
+        window.mainSwiper.appendSlide(mainSlides);
+        thumbs.appendSlide(thumbSlides);
+
+        window.mainSwiper.update();
+        thumbs.update();
+
+        window.mainSwiper.slideTo(0, 0);
+        thumbs.slideTo(0, 0);
+    }
+
+    // =========================
+    // HELPERS
+    // =========================
+
+    function capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    function updateActiveButtonThumbs(type, activeIndex) {
+
+        var btnClass = `.${type}-btn`;
+        var dataAttr = `data-${type}`;
+
+        var currentClass =
+            `.tf-product-info-list .value-current${capitalizeFirstLetter(type)}`;
+
+        var selectClass =
+            `.tf-product-info-list .select-current${capitalizeFirstLetter(type)}`;
+
+        $section.find(btnClass).removeClass("active");
+
+        var currentSlide =
+            $(window.mainSwiper.slides[activeIndex]);
+
+        var currentValue = currentSlide.attr(dataAttr);
+
+        if (currentValue) {
+
+            $section.find(`${btnClass}[${dataAttr}='${currentValue}']`)
+                .addClass("active");
+
+            $section.find(currentClass).text(currentValue);
+
+            $section.find(selectClass).text(currentValue);
         }
+    }
 
-        function scrollToThumbs(type, value, color) {
+    function scrollToThumbs(type, value, color) {
 
-            if (!value || !color) return;
+        if (!value || !color) return;
 
-            var matchingSlides = $mainEl.find(".swiper-slide").filter(function () {
+        var targetIndex = -1;
 
-                return (
-                    $(this).attr(`data-${type}`) === value &&
-                    $(this).attr("data-color") === color
-                );
-            });
+        $(window.mainSwiper.slides).each(function (index) {
 
-            if (matchingSlides.length > 0) {
-
-                var firstIndex = matchingSlides.first().index();
-
-                main.slideTo(firstIndex, 1000, false);
-
-                thumbs.slideTo(firstIndex, 1000, false);
+            if (
+                $(this).attr(`data-${type}`) === value &&
+                $(this).attr("data-color") === color
+            ) {
+                targetIndex = index;
+                return false;
             }
+        });
+
+        if (targetIndex >= 0) {
+
+            window.mainSwiper.slideTo(targetIndex, 1000, false);
+
+            thumbs.slideTo(targetIndex, 1000, false);
         }
+    }
 
-        // =========================
-        // BUTTON EVENTS
-        // =========================
+    // =========================
+    // BUTTON EVENTS
+    // =========================
 
-        function setupVariantButtonsThumbs(type) {
+    function setupVariantButtonsThumbs(type) {
 
-            $section.find(`.${type}-btn`).on("click", function () {
+        $section.find(`.${type}-btn`)
+            .off("click")
+            .on("click", function () {
 
                 if ($(this).closest(".modal-quick-view").length) return;
 
@@ -185,14 +193,12 @@ if ($(".product-thumbs-slider").length > 0) {
 
                     $section.find(".value-currentColor").text(value);
 
-                    // mode filter
                     if (enableColorFilter) {
 
                         filterSlidesByColor(value);
 
                     } else {
 
-                        // mode thường
                         scrollToThumbs(type, value, value);
                     }
 
@@ -212,29 +218,37 @@ if ($(".product-thumbs-slider").length > 0) {
 
                 scrollToThumbs(type, value, color);
             });
-        }
+    }
 
-        ["color", "size"].forEach((type) => {
+    // =========================
+    // EVENTS
+    // =========================
 
-            main.on("slideChange", function () {
-                updateActiveButtonThumbs(type, this.activeIndex);
-            });
+    ["color", "size"].forEach((type) => {
 
-            setupVariantButtonsThumbs(type);
+        window.mainSwiper.on("slideChange", function () {
 
-            updateActiveButtonThumbs(type, main.activeIndex);
+            updateActiveButtonThumbs(type, this.activeIndex);
         });
-        // INIT FIRST ACTIVE COLOR
-        if (enableColorFilter) {
 
-            const firstActiveColor =
-                $section.find(".color-btn.active").data("color");
+        setupVariantButtonsThumbs(type);
 
-            if (firstActiveColor) {
-                filterSlidesByColor(firstActiveColor);
-            }
-        }
+        updateActiveButtonThumbs(type, window.mainSwiper.activeIndex);
     });
+
+    // =========================
+    // INIT FIRST ACTIVE COLOR
+    // =========================
+
+    if (enableColorFilter) {
+
+        const firstActiveColor =
+            $section.find(".color-btn.active").data("color");
+
+        if (firstActiveColor) {
+            filterSlidesByColor(firstActiveColor);
+        }
+    }
 }
 
 (function ($) {
@@ -325,24 +339,37 @@ if ($(".product-thumbs-slider").length > 0) {
             secondaryZoomLevel: 2,
             maxZoomLevel: 3,
         });
+
         lightbox.init();
 
         lightbox.on("change", () => {
             const { pswp } = lightbox;
-            main.slideTo(pswp.currIndex, 0, false);
+
+            if (window.mainSwiper) {
+                window.mainSwiper.slideTo(pswp.currIndex, 0, false);
+            }
         });
 
         lightbox.on("afterInit", () => {
-            if (main.params.autoplay.enabled) {
-                main.autoplay.stop();
+
+            if (
+                window.mainSwiper &&
+                window.mainSwiper.params?.autoplay?.enabled
+            ) {
+                window.mainSwiper.autoplay.stop();
             }
         });
 
         lightbox.on("closingAnimationStart", () => {
             const { pswp } = lightbox;
-            main.slideTo(pswp.currIndex, 0, false);
-            if (main.params.autoplay.enabled) {
-                main.autoplay.start();
+
+            if (window.mainSwiper) {
+
+                window.mainSwiper.slideTo(pswp.currIndex, 0, false);
+
+                if (window.mainSwiper.params?.autoplay?.enabled) {
+                    window.mainSwiper.autoplay.start();
+                }
             }
         });
     };

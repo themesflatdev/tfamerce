@@ -492,6 +492,8 @@ select {
         &:focus {
             border-color: var(--text);
         }
+
+
     }
 
     &::after {
@@ -505,6 +507,7 @@ select {
         z-index: 1;
         font-weight: 400;
         color: var(--text);
+        pointer-events: none;
     }
 
     &:hover {
@@ -515,6 +518,27 @@ select {
 
     &.style-2 {
         min-width: 100px;
+    }
+
+    &.style-3 {
+        select {
+            padding: 8px 20px 8px 12px;
+            border-radius: 8px;
+        }
+
+        &::after {
+            right: 10px;
+            font-size: 16px;
+        }
+    }
+
+    &.style-4 {
+        select {
+            background: var(--bg-2);
+            border: 0;
+            padding: 14px 16px;
+            padding-right: 40px;
+        }
     }
 }
 
@@ -670,6 +694,29 @@ select {
         &.style-2 {
             width: 100%;
             max-width: 690px;
+        }
+    }
+}
+
+.form-gift {
+    .form-content {
+        padding: 23px;
+        border: 1px solid var(--black);
+        border-radius: 8px;
+        gap: 8px;
+        display: none;
+
+    }
+
+    .tf-product-form-gift {
+        &:has(input:checked) {
+            .checkbox-wrap {
+                margin-bottom: 16px;
+            }
+
+            .form-content {
+                display: grid;
+            }
         }
     }
 }

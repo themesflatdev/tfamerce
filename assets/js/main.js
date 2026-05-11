@@ -285,6 +285,13 @@
                 $wrapper.find(".size-btn").removeClass("active");
                 $(this).addClass("active");
             });
+
+            $(".variant-picker-item label").on("click", function (e) {
+                $(this)
+                    .closest(".variant-picker-item")
+                    .find(".variant-picker-label-value")
+                    .text($(this).data("value"));
+            });
         }
     };
 

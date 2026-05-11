@@ -2236,3 +2236,15 @@
         }
     }
 }
+
+.sidebar-product {
+    width: 410px !important;
+
+    .widget-facet {
+        &:not(:last-child) {
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--line);
+            margin-bottom: 20px;
+        }
+    }
+}
