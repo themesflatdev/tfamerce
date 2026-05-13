@@ -127,6 +127,12 @@
         }
     }
 
+    @include res(xxl, min) {
+        &.style-vertical {
+            padding-right: 30px;
+        }
+    }
+
     @include res(lg, min) {
         &.style-vertical {
             display: grid;
@@ -136,8 +142,32 @@
             }
 
             .tf-btn-tab {
-                &:not(.active) {
-                    border-color: var(--line);
+                border-color: var(--line);
+
+                .text {
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: -16px;
+                        left: auto;
+                        right: 0;
+                        height: 2px;
+                        width: 0%;
+                        background: var(--text);
+                        @include transition3;
+                    }
+                }
+
+                &.active {
+                    .text {
+                        &::before {
+                            width: 100%;
+                            left: 0;
+                            right: auto;
+                        }
+                    }
                 }
             }
         }
