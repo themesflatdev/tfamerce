@@ -2549,19 +2549,13 @@
 
         .tf-fbt-col-total-price {
             padding: 40px 20px;
-            background-color: rgb(242, 242, 242);
+            background-color: var(--bg);
             // height: max-content;
 
             .text {
                 width: 100%;
             }
 
-            .tf-btn {
-                height: 49px;
-                font-size: 16px;
-                font-weight: 600;
-                line-height: 19px;
-            }
         }
     }
 

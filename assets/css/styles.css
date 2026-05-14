@@ -14033,16 +14033,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 .tf-product-fbt-wrap form .tf-fbt-col-total-price {
   padding: 40px 20px;
-  background-color: rgb(242, 242, 242);
+  background-color: var(--bg);
 }
 .tf-product-fbt-wrap form .tf-fbt-col-total-price .text {
   width: 100%;
-}
-.tf-product-fbt-wrap form .tf-fbt-col-total-price .tf-btn {
-  height: 49px;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 19px;
 }
 @media (max-width: 1199px) {
   .tf-product-fbt-wrap {
