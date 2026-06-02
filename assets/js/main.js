@@ -1192,22 +1192,9 @@
     /* Bottom Sticky
     -------------------------------------------------------------------------*/
     var scrollBottomSticky = function () {
-        // if ($(".tf-sticky-btn-atc").length > 0) {
-        //     $(window).on("scroll", function () {
-        //         var scrollPosition = $(this).scrollTop();
-        //         var myElement = $(".tf-sticky-btn-atc");
-        //         var footerOffset = $("footer").offset().top;
-        //         var productMainOffset = $(".section-product-single").offset().top;
-        //         var windowHeight = $(window).height();
-
-        //         if (scrollPosition >= 500 && scrollPosition + windowHeight < footerOffset) {
-        //             myElement.addClass("show");
-        //         } else {
-        //             myElement.removeClass("show");
-        //         }
-        //     });
-        // }
-        var footerOffset = $("footer").offset().top;
+        const footerOffset = $("footer").length
+            ? $("footer").offset().top
+            : null;
 
         $(window).on("scroll", function () {
             var addToCart = $(".section-product-single .btn-action-price")[0];
@@ -2082,7 +2069,62 @@
             });
         }, 300);
     }
+    /* RTL
+    -------------------------------------------------------------------------*/
+    var RTL = function () {
+        var isRTL = $("body").hasClass("rtl") || localStorage.getItem("dir") === "rtl";
 
+        if (isRTL) {
+            $("html").attr("dir", "rtl");
+            $("body").addClass("rtl");
+            $("#toggle-rtl").text("ltr");
+
+            $(".sub-menu_link,.nav-category_link, .tf-page-pagination").find(".icon").removeClass("icon-CaretRightThin").addClass("icon-CaretLeft");
+            // $(".tf-topbar").find(".icon").removeClass("icon-CaretRightThin").addClass("icon-CaretLeft");
+            $(".tf-btn-icon,.list-btn-tab-accordion .accordion-title").find(".icon").removeClass("icon-ArrowRight").addClass("icon-ArrowLeft");
+
+            // $(".tf-slideshow").find(".icon").removeClass("icon-ArrowLongLeft").addClass("icon-ArrowLongRight");
+            $(".tf-slideshow .icon").each(function () {
+                const $icon = $(this);
+                if ($icon.hasClass("icon-ArrowLongRight")) {
+                    $icon.removeClass("icon-ArrowLongRight").addClass("icon-ArrowLongLeft");
+                } else if ($icon.hasClass("icon-ArrowLongLeft")) {
+                    $icon.removeClass("icon-ArrowLongLeft").addClass("icon-ArrowLongRight");
+                }
+            });
+            $(".tes_thumb .tf-sw-nav-2 .icon, .sect-heading .tf-sw-nav-2 .icon").each(function () {
+                const $icon = $(this);
+                if ($icon.hasClass("icon-ArrowRight")) {
+                    $icon.removeClass("icon-ArrowRight").addClass("icon-ArrowLeft");
+                } else if ($icon.hasClass("icon-ArrowLeft")) {
+                    $icon.removeClass("icon-ArrowLeft").addClass("icon-ArrowRight");
+                }
+            });
+            $(".swip-text .icon,.tf-topbar .icon").each(function () {
+                const $icon = $(this);
+                if ($icon.hasClass("icon-CaretRightThin")) {
+                    $icon.removeClass("icon-CaretRightThin").addClass("icon-CaretLeft");
+                } else if ($icon.hasClass("icon-CaretLeft")) {
+                    $icon.removeClass("icon-CaretLeft").addClass("icon-CaretRightThin");
+                }
+            });
+            localStorage.setItem("dir", "rtl");
+        } else {
+            $("html").attr("dir", "ltr");
+            $("body").removeClass("rtl");
+            $("#toggle-rtl").text("rtl");
+            localStorage.setItem("dir", "ltr");
+        }
+        $("#toggle-rtl").on("click", function () {
+            var currentDir = $("html").attr("dir");
+            if (currentDir === "rtl") {
+                localStorage.setItem("dir", "ltr");
+            } else {
+                localStorage.setItem("dir", "rtl");
+            }
+            location.reload();
+        });
+    };
     // Dom Ready
     $(function () {
         circleText();
@@ -2129,7 +2171,7 @@
         reveal();
         handleHoverLookBook();
         noticePop();
-
+        RTL();
         if (document.readyState === "loading") {
             document.addEventListener("DOMContentLoaded", function () {
                 preloader();

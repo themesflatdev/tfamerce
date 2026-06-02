@@ -546,6 +546,7 @@
     .bn-bg {
         position: absolute;
         inset: 0;
+        pointer-events: none;
 
         img {
             width: 100%;

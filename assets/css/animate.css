@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 .animated {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
@@ -12,6 +13,7 @@
 }
 
 @-webkit-keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -33,6 +35,7 @@
 }
 
 @keyframes bounce {
+
     0%,
     20%,
     50%,
@@ -62,6 +65,7 @@
 }
 
 @-webkit-keyframes flash {
+
     0%,
     50%,
     100% {
@@ -75,6 +79,7 @@
 }
 
 @keyframes flash {
+
     0%,
     50%,
     100% {
@@ -135,6 +140,7 @@
 }
 
 @-webkit-keyframes shake {
+
     0%,
     100% {
         -webkit-transform: translateX(0);
@@ -160,6 +166,7 @@
 }
 
 @keyframes shake {
+
     0%,
     100% {
         -webkit-transform: translateX(0);
@@ -2813,21 +2820,25 @@
         transform: translateX(-100%);
     }
 }
+
 @keyframes infiniteScrollRight {
     0% {
-        transform: translateX(-100%);
+        transform: translateX(0);
     }
+
     100% {
-        transform: translateX(0%);
+        transform: translateX(100%);
     }
 }
 
 @-webkit-keyframes tf-ani-flash {
+
     50%,
     from,
     to {
         opacity: 1;
     }
+
     25%,
     75% {
         opacity: 0;
@@ -2835,11 +2846,13 @@
 }
 
 @keyframes tf-ani-flash {
+
     50%,
     from,
     to {
         opacity: 1;
     }
+
     25%,
     75% {
         opacity: 0;
@@ -2850,17 +2863,20 @@
     from {
         transform: rotate(0deg) scale(1);
     }
+
     to {
         transform: rotate(360deg);
     }
 }
 
 @keyframes tf-ani-flash {
+
     50%,
     from,
     to {
         opacity: 1;
     }
+
     25%,
     75% {
         opacity: 0;
@@ -2890,16 +2906,19 @@
 }
 
 @-webkit-keyframes tf-ani-tada {
+
     from,
     to {
         -webkit-transform: scale3d(1, 1, 1);
         transform: scale3d(1, 1, 1);
     }
+
     10%,
     20% {
         -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
         transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
     }
+
     30%,
     50%,
     70%,
@@ -2907,6 +2926,7 @@
         -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
         transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
     }
+
     40%,
     60%,
     80% {
@@ -2914,17 +2934,21 @@
         transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
     }
 }
+
 @keyframes tf-ani-tada {
+
     from,
     to {
         -webkit-transform: scale3d(1, 1, 1);
         transform: scale3d(1, 1, 1);
     }
+
     10%,
     20% {
         -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
         transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
     }
+
     30%,
     50%,
     70%,
@@ -2932,6 +2956,7 @@
         -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
         transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
     }
+
     40%,
     60%,
     80% {
@@ -2939,6 +2964,7 @@
         transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
     }
 }
+
 .tf-ani-tada {
     -webkit-animation: tf-ani-tada 2s infinite;
     animation: tf-ani-tada 2s infinite;
@@ -2949,23 +2975,28 @@
         transform: scale(1);
         opacity: 1;
     }
+
     50% {
         transform: scale(1.05);
         opacity: 0.9;
     }
+
     100% {
         transform: scale(1);
         opacity: 1;
     }
 }
+
 @keyframes spin {
     from {
         transform: translate(-50%, -50%) rotate(0deg);
     }
+
     to {
         transform: translate(-50%, -50%) rotate(360deg);
     }
 }
+
 @keyframes fadeInRightBottom {
     0% {
         opacity: 0;
@@ -2981,33 +3012,37 @@
 .fadeInRightBottom {
     animation-name: fadeInRightBottom;
 }
+
 @keyframes fadeInLeftBottom {
     0% {
         opacity: 0;
-        transform: translate(-20px, 20px); 
+        transform: translate(-20px, 20px);
     }
 
     100% {
         opacity: 1;
-        transform: translate(0, 0); 
+        transform: translate(0, 0);
     }
 }
 
 .fadeInLeftBottom {
     animation-name: fadeInLeftBottom;
 }
+
 @-webkit-keyframes fadeZoom {
     0% {
         opacity: 0;
         -webkit-transform: scale(0.8);
         transform: scale(0.8);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: scale(1);
         transform: scale(1);
     }
 }
+
 @keyframes fadeZoom {
     0% {
         opacity: 0;
@@ -3015,6 +3050,7 @@
         -ms-transform: scale(0.8);
         transform: scale(0.8);
     }
+
     100% {
         opacity: 1;
         -webkit-transform: scale(1);
@@ -3022,6 +3058,7 @@
         transform: scale(1);
     }
 }
+
 .fadeZoom {
     -webkit-animation-name: fadeZoom;
     animation-name: fadeZoom;
