@@ -23829,5 +23829,12 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .rtl .lookbook-hover-v1 .img-banner {
   border-radius: 0px 20px 20px 0px;
 }
+.rtl .tf-zoom-main1,
+.rtl .tf-zoom-main {
+  direction: ltr;
+}
+.rtl .drift-zoom-pane {
+  direction: ltr;
+}
 
 /*# sourceMappingURL=styles.css.map */

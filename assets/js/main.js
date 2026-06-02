@@ -2093,7 +2093,7 @@
                     $icon.removeClass("icon-ArrowLongLeft").addClass("icon-ArrowLongRight");
                 }
             });
-            $(".tes_thumb .tf-sw-nav-2 .icon, .sect-heading .tf-sw-nav-2 .icon").each(function () {
+            $(".tes_thumb .tf-sw-nav-2 .icon, .sect-heading .tf-sw-nav-2 .icon,.tf-slideshow .tf-sw-nav-2 .icon").each(function () {
                 const $icon = $(this);
                 if ($icon.hasClass("icon-ArrowRight")) {
                     $icon.removeClass("icon-ArrowRight").addClass("icon-ArrowLeft");
