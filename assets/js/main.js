@@ -2072,6 +2072,7 @@
     /* RTL
     -------------------------------------------------------------------------*/
     var RTL = function () {
+        if ($("body").hasClass("ltr")) return;
         var isRTL = $("body").hasClass("rtl") || localStorage.getItem("dir") === "rtl";
 
         if (isRTL) {

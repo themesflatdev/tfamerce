@@ -536,4 +536,18 @@
     .s-invoice {
         direction: rtl;
     }
+
+    .canvas-quickview .mini-quick-image {
+        order: 1;
+    }
+
+    .lookbook-hover-v1 {
+        .col-right {
+            border-radius: 20px 0px 0px 20px;
+        }
+
+        .img-banner {
+            border-radius: 0px 20px 20px 0px;
+        }
+    }
 }

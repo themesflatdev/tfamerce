@@ -23820,5 +23820,14 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 .rtl .s-invoice {
   direction: rtl;
 }
+.rtl .canvas-quickview .mini-quick-image {
+  order: 1;
+}
+.rtl .lookbook-hover-v1 .col-right {
+  border-radius: 20px 0px 0px 20px;
+}
+.rtl .lookbook-hover-v1 .img-banner {
+  border-radius: 0px 20px 20px 0px;
+}
 
 /*# sourceMappingURL=styles.css.map */
