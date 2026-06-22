@@ -2081,10 +2081,8 @@
             $("#toggle-rtl").text("ltr");
 
             $(".sub-menu_link,.nav-category_link, .tf-page-pagination").find(".icon").removeClass("icon-CaretRightThin").addClass("icon-CaretLeft");
-            // $(".tf-topbar").find(".icon").removeClass("icon-CaretRightThin").addClass("icon-CaretLeft");
             $(".tf-btn-icon,.list-btn-tab-accordion .accordion-title").find(".icon").removeClass("icon-ArrowRight").addClass("icon-ArrowLeft");
 
-            // $(".tf-slideshow").find(".icon").removeClass("icon-ArrowLongLeft").addClass("icon-ArrowLongRight");
             $(".tf-slideshow .icon").each(function () {
                 const $icon = $(this);
                 if ($icon.hasClass("icon-ArrowLongRight")) {
